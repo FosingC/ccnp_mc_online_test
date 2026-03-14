@@ -9,7 +9,7 @@ import re
 st.set_page_config(page_title="CCNP 学习应用 v11", layout="wide")
 CSV_FILE = "ccnp_data.csv"
 IMG_FOLDER = "ccnp_images"
-HISTORY_FILE = "study_history.json"
+HISTORY_FILE = "flagged_questions.json"
 
 # --- 数据加载函数 ---
 @st.cache_data
