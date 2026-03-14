@@ -1,0 +1,162 @@
+================================================================================
+CCNP 300-410 ENCOR - QUESTION 21
+SW2 Telnet 访问控制 + EAST uRPF allow-default
+物理环境：CSR（ISP + EAST + SW2）
+================================================================================
+
+
+================================================================================
+预配置命令（环境搭建）
+================================================================================
+
+======================================
+ISP 预配置
+======================================
+enable
+configure terminal
+hostname ISP
+
+interface Loopback0
+ ip address 172.16.0.100 255.255.255.255
+ ip ospf 1 area 0
+interface Loopback16
+ ip address 172.16.16.16 255.255.255.255
+
+interface Ethernet0/0
+ ip address 10.0.10.1 255.255.255.252
+ ip ospf 1 area 1
+ no shutdown
+interface Ethernet0/1
+ ip address 10.0.20.1 255.255.255.252
+ ip ospf 1 area 0
+ no shutdown
+
+router ospf 1
+ router-id 1.1.1.1
+ network 10.0.10.0 0.0.0.3 area 1
+ network 10.0.20.0 0.0.0.3 area 0
+ network 172.16.0.100 0.0.0.0 area 0
+
+end
+write memory
+
+
+======================================
+EAST 预配置
+======================================
+enable
+configure terminal
+hostname EAST
+
+interface Ethernet0/0
+ ip address 192.168.10.1 255.255.255.0
+ no shutdown
+interface Ethernet0/1
+ ip address 10.0.10.2 255.255.255.252
+ ip verify unicast source reachable-via rx
+ no shutdown
+
+router ospf 1
+ router-id 2.2.2.2
+ network 10.0.10.0 0.0.0.3 area 1
+
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+ transport input ssh
+
+end
+write memory
+
+
+======================================
+SW2 预配置
+======================================
+enable
+configure terminal
+hostname SW2
+
+enable secret Cisco
+username SW2 secret Cisco
+
+aaa new-model
+aaa authentication login telnet local
+
+interface Ethernet0/0
+ ip address 192.168.20.2 255.255.255.0
+ no shutdown
+
+ip access-list standard ISP
+ deny any log
+
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ access-class ISP in
+ exec-timeout 0 0
+ transport input ssh
+
+end
+write memory
+
+
+
+================================================================================
+任务解答命令
+================================================================================
+
+======================================
+任务 1：仅允许 ISP Loopback0 Telnet 到 SW2，并使用 AAA
+======================================
+
+SW2
+enable
+configure terminal
+ip access-list standard ISP
+ 5 permit host 172.16.0.100
+
+line vty 0 4
+ login authentication telnet
+
+end
+write memory
+
+
+
+======================================
+任务 2：修复 EAST 上 uRPF 导致的默认路由可达性问题
+======================================
+
+EAST
+enable
+configure terminal
+interface Ethernet0/1
+ ip verify unicast source reachable-via rx allow-default
+end
+write memory
+
+
+
+================================================================================
+验证命令
+================================================================================
+
+! 在 ISP 上：验证 OSPF 和默认路由可达性
+ISP# show ip ospf neighbor
+ISP# show ip route 192.168.10.1
+ISP# show ip route 172.16.16.16
+
+! 1) 从 ISP Telnet 到 SW2（只允许 Loopback0 源）
+ISP# telnet 192.168.20.2 source-interface Loopback0
+! 登录时输入：username SW2，password Cisco
+
+! 2) 在 EAST 上 Ping ISP Loopback16（经默认路由）
+EAST# ping 172.16.16.16
+
+! 3) 检查 SW2 上 ACL 命中情况
+SW2# show access-lists ISP
