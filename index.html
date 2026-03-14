@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCNP MC Online Test</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- ===== HEADER ===== -->
+    <header class="app-header">
+      <div class="logo">📡</div>
+      <h1>CCNP MC Online Test</h1>
+      <p>Cisco Certified Network Professional — Practice Exam</p>
+    </header>
+
+    <!-- ===== SETUP SCREEN ===== -->
+    <section id="setup-screen">
+      <div class="card">
+        <div class="setup-grid">
+
+          <!-- Category selection -->
+          <div class="setup-section">
+            <h3>Categories</h3>
+            <div class="category-actions">
+              <button id="select-all-btn" class="btn btn-outline btn-sm">Select All</button>
+              <button id="deselect-all-btn" class="btn btn-outline btn-sm">Deselect All</button>
+            </div>
+            <div id="category-checkboxes"></div>
+          </div>
+
+          <!-- Test configuration -->
+          <div class="setup-section">
+            <h3>Test Options</h3>
+            <div class="count-input-wrap">
+              <label for="question-count">Number of questions:</label>
+              <input type="number" id="question-count" min="1" max="50" value="10">
+            </div>
+            <p class="setup-hint">
+              Questions are randomly selected from the question bank.<br>
+              A score of <strong>70%</strong> or above is required to pass.
+            </p>
+          </div>
+
+        </div>
+
+        <div style="text-align:center; margin-top:28px;">
+          <button id="start-btn" class="btn btn-primary" style="font-size:1.1rem; padding:14px 40px;">
+            Start Test →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST SCREEN ===== -->
+    <section id="test-screen" class="hidden">
+
+      <!-- Test header (progress + timer) -->
+      <div class="test-header">
+        <div class="progress-info">
+          <span id="progress-text">Question 1 of 10</span>
+          <span id="answered-count">Answered: 0/10</span>
+          <div class="progress-bar-track">
+            <div id="progress-bar" style="width:10%"></div>
+          </div>
+        </div>
+        <div class="timer-wrap">
+          ⏱ <span id="timer">00:00</span>
+        </div>
+      </div>
+
+      <!-- Question card -->
+      <div class="card question-card">
+        <div class="q-meta">
+          <span id="q-category">Routing</span>
+          <button id="flag-btn" class="btn btn-warn btn-sm">🚩 Flag for Review</button>
+        </div>
+        <p id="q-text">Question text goes here.</p>
+        <div id="q-options"></div>
+
+        <div class="question-actions">
+          <button id="prev-btn" class="btn btn-outline">← Previous</button>
+          <button id="next-btn" class="btn btn-primary">Next →</button>
+        </div>
+      </div>
+
+      <!-- Question map -->
+      <div class="card question-map-wrap">
+        <h4>Question Map</h4>
+        <div id="question-map"></div>
+        <div class="map-legend">
+          <div class="legend-item">
+            <div class="legend-dot current"></div> Current
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot answered"></div> Answered
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot flagged"></div> Flagged
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot unanswered"></div> Unanswered
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===== RESULTS SCREEN ===== -->
+    <section id="results-screen" class="hidden">
+
+      <!-- Score summary -->
+      <div class="card">
+        <div class="results-header">
+          <h2>Test Results</h2>
+        </div>
+        <div class="score-row">
+          <div id="score-circle" class="score-circle pass">100%</div>
+          <p id="score-detail">10 / 10 correct</p>
+          <p id="time-taken">Time: 00:00</p>
+          <span id="pass-fail-badge" class="pass-fail-badge pass">✓ PASS</span>
+        </div>
+
+        <div id="category-breakdown"></div>
+
+        <div style="display:flex; gap:12px; justify-content:center; margin-top:24px; flex-wrap:wrap;">
+          <button id="review-all-btn" class="btn btn-outline">📋 Review Answers</button>
+          <button id="restart-btn" class="btn btn-primary">🔄 New Test</button>
+        </div>
+      </div>
+
+      <!-- Answer review -->
+      <div id="review-section" class="card">
+        <h3>Answer Review</h3>
+        <div id="review-container"></div>
+      </div>
+
+    </section>
+
+  </div><!-- end .page-wrapper -->
+
+  <!-- ===== MODAL ===== -->
+  <div id="modal-overlay" class="hidden">
+    <div class="modal-box">
+      <p id="modal-message">Message here.</p>
+      <div class="modal-actions">
+        <button id="modal-cancel-btn" class="btn btn-outline">Cancel</button>
+        <button id="modal-confirm-btn" class="btn btn-primary">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
