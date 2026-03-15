@@ -38,10 +38,12 @@ def load_history():
                     data["flagged"] = []
                 if "progress" not in data:
                     data["progress"] = None
+                if "stats" not in data:
+                    data["stats"] = {"correct": [], "wrong": []}
                 return data
             except:
-                return {"flagged": [], "progress": None}
-    return {"flagged": [], "progress": None}
+                return {"flagged": [], "progress": None, "stats": {"correct": [], "wrong": []}}
+    return {"flagged": [], "progress": None, "stats": {"correct": [], "wrong": []}}
 
 def save_history(history):
     """保存学习记录到文件"""
@@ -281,6 +283,71 @@ if st.button("显示 / 隐藏答案"):
 if st.session_state.show_answer:
     ans = row['answer'] if pd.notna(row['answer']) else "未知"
     st.success(f"**正确答案：** {ans}")
+    
+    # --- 准确率统计：答对/答错按钮 ---
+    question_id = row['id']
+    is_correct = question_id in st.session_state.history["stats"]["correct"]
+    is_wrong = question_id in st.session_state.history["stats"]["wrong"]
+    
+    st.markdown("#### 自我评估")
+    c_correct, c_wrong = st.columns(2)
+    
+    with c_correct:
+        correct_label = "✅已标记答对" if is_correct else "✅ 我答对了"
+        if st.button(correct_label, key="btn_correct", disabled=is_correct):
+            # 添加到答对列表，从答错列表移除
+            if question_id not in st.session_state.history["stats"]["correct"]:
+                st.session_state.history["stats"]["correct"].append(question_id)
+            if question_id in st.session_state.history["stats"]["wrong"]:
+                st.session_state.history["stats"]["wrong"].remove(question_id)
+            save_history(st.session_state.history)
+            st.rerun()
+    
+    with c_wrong:
+        wrong_label = "❌已标记答错" if is_wrong else "❌ 我答错了"
+        if st.button(wrong_label, key="btn_wrong", disabled=is_wrong):
+            # 添加到答错列表，从答对列表移除
+            if question_id not in st.session_state.history["stats"]["wrong"]:
+                st.session_state.history["stats"]["wrong"].append(question_id)
+            if question_id in st.session_state.history["stats"]["correct"]:
+                st.session_state.history["stats"]["correct"].remove(question_id)
+            save_history(st.session_state.history)
+            st.rerun()
+
+# --- 侧边栏：准确率统计 ---
+stats = st.session_state.history.get("stats", {"correct": [], "wrong": []})
+total_answered = len(stats["correct"]) + len(stats["wrong"])
+
+st.sidebar.divider()
+st.sidebar.markdown("### 📊 准确率统计")
+
+if total_answered > 0:
+    accuracy = len(stats["correct"]) / total_answered * 100
+    st.sidebar.metric("已答题数", total_answered)
+    
+    # 根据正确率显示不同颜色
+    if accuracy >= 70:
+        # 绿色：正确率高
+        st.sidebar.success(f"**正确率：{accuracy:.1f}%** 🎉")
+        st.sidebar.progress(accuracy / 100)
+    elif accuracy >= 50:
+        # 黄色：正确率中等
+        st.sidebar.warning(f"**正确率：{accuracy:.1f}%** 📈")
+        st.sidebar.progress(accuracy / 100)
+    else:
+        # 红色：正确率低
+        st.sidebar.error(f"**正确率：{accuracy:.1f}%** 📉")
+        st.sidebar.progress(accuracy / 100)
+    
+    st.sidebar.caption(f"✅ 正确: {len(stats['correct'])} | ❌ 错误: {len(stats['wrong'])}")
+else:
+    st.sidebar.info("暂无答题记录")
+
+# 重置统计按钮
+if st.sidebar.button("🗑️ 重置准确率统计", key="reset_stats"):
+    st.session_state.history["stats"] = {"correct": [], "wrong": []}
+    save_history(st.session_state.history)
+    st.rerun()
 
 # 导航
 st.divider()
