@@ -378,7 +378,7 @@ devices?","A. DMVPN
 B. GETVPN
 C. Cisco Easy VPN
 D. FlexVPN",A,"p29_img0.png,p29_img1.png",29,60
-QUESTION 61,,"A. 10.0.0.1
+QUESTION 61,Which next hop is going to be used for 172.17.1.0/24 ?,"A. 10.0.0.1
 B. 192.168.1.2
 C. 10.0.0.2
 D. 192.168.3.2",A,"p30_img0.png,p30_img1.png",30,61
@@ -557,7 +557,7 @@ B. A dedicated WAN distribution layer to consolidate connectivity to remote site
 C. A collapsed core and distribution layer to minimize costs.
 D. Multiple MPLS VPN connections with static routing.
 E. Multiple MPLS VPN connections with dynamic routing.",AB,,38,90
-QUESTION 91,,"A. Specify the test frequency.
+QUESTION 91,Which task do you need to perform first when you configure IP SLA to troubleshoot a network connectivity issue?,"A. Specify the test frequency.
 B. Enable the ICMP echo operation.
 C. Schedule the ICMP echo operation.
 D. Verify the ICMP echo operation.",B,p38_img0.png,38,91
@@ -582,7 +582,7 @@ Which location within the network is preferred when using a dedicated router for
 B. provider edge
 C. access edge
 D. distribution edge",B,p39_img0.png,39,95
-QUESTION 96,,"A. BGP
+QUESTION 96,Which protocol is used in a DMVPN network to map physical IP addresses to logical IP addresses?,"A. BGP
 B. LLDP
 C. EIGRP
 D. NHRP",D,p40_img0.png,40,96
@@ -672,21 +672,21 @@ C. authentiation
 D. no encryption
 E. privileged
 F. read-only",ADF,,44,107
-QUESTION 108,,"A. Community String
+QUESTION 108,"In the following SNMP attributes for SNMPv2c and SNMPv3, which are the attributes that matches best for SNMPv3? (Choose 3)","A. Community String
 B. username and password
 C. authentiation
 D. no encryption
 E. privileged
 F. read-only",BCE,p44_img0.png,44,108
-QUESTION 109,,"A. assigns labels to unlabeled packets
+QUESTION 109,What of the followings are best matched for Label Switch Router? (Choose two),"A. assigns labels to unlabeled packets
 B. handles traffic between multiple VPNs
 C. reads the labels and forwards the packet based on the labels
 D. performs penultimate hop popping",CD,p44_img0.png,44,109
-QUESTION 110,,"A. assigns labels to unlabeled packets
+QUESTION 110,What of the followings are best matched for Label Edge Router? (Choose two),"A. assigns labels to unlabeled packets
 B. handles traffic between multiple VPNs
 C. reads the labels and forwards the packet based on the labels
 D. performs penultimate hop popping",AB,p45_img0.png,45,110
-QUESTION 111,,"A. Modify the access list to use the correct IP address.
+QUESTION 111,Refer to the exhibit. An IT staff member comes into the office during normal office hours and cannot access devices through SSH Which action should be taken to resolve this issue?,"A. Modify the access list to use the correct IP address.
 B. Configure the correct time range.
 C. Modify the access list to correct the subnet mask
 D. Configure the access list in the outbound direction.",A,"p45_img0.png,p45_img1.png",45,111
@@ -1833,7 +1833,7 @@ What does the MP-BGP OPEN message contain?","A. MPLS labels and the IP address o
 B. the version number and the AS number to which the router belongs
 C. IP routing information and the AS number to which the router belongs
 D. NLRI, path attributes, and IP addresses of the sending and receiving routers",B,,122,254
-QUESTION 255,,"A. Route distinguishes make a unique VPNv4 address across the MPLS network.
+QUESTION 255,What statement about route distinguishes in an MPLS network is true?,"A. Route distinguishes make a unique VPNv4 address across the MPLS network.
 B. Route distinguishers allow multiple instances of a routing table to coexist within the edge router.
 C. Route distinguishes are used for label bindings
 D. Route distinguishes define which prefixes are imported and exported on the edge router",A,p123_img0.png,123,255
@@ -5157,7 +5157,8 @@ Which are the operations of Label Switch Router (Choose two)?","A. assigns label
 B. performs penultimate hop popping
 C. handles traffic between multiple VPNs    
 D. reads the labels and forwards the packet based on the labels",BD,,251,487
-QUESTION 488,,"A. assigns labels to unlabeled packets
+QUESTION 488,"Drag and drop the operations from the left onto the locations where the operations are performed on the right.
+Which are the operations of Label Edge Router (Choose two)?","A. assigns labels to unlabeled packets
 B. performs penultimate hop popping
 C. handles traffic between multiple VPNs    
 D. reads the labels and forwards the packet based on the labels",AC,p252_img0.png,252,488
@@ -5761,11 +5762,9 @@ C. interface GigabitEthernet0/0
 ip access-group R2WAN out
 D. ip access-list extended R2WAN
 permit udp any any eq 68",D,p281_img0.png,281,535
-QUESTION 536,,"A. It advertises labels to peers only when the peer requests.
-B.
-It sends a unicast hello message to a specific LSR.
-C.
-It sends a unicast hello message to a specific LER.
+QUESTION 536,What is the downstream unsolicited distribution method in MPLS?,"A. It advertises labels to peers only when the peer requests.
+B.It sends a unicast hello message to a specific LSR.
+C.It sends a unicast hello message to a specific LER.
 D. It advertises labels to peers without peer request.",D,p281_img1.png,281,536
 QUESTION 537,"QUESTION 537
 
