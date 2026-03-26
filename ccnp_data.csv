@@ -2754,7 +2754,7 @@ B. Advertise the Loopback0 interface from R2 across the tunnel
 C. Stop sending a route matching the tunnel destination across the tunnel
 D. Readdress the IP network on the Tunnel0 on both routers using the /31 netmask",C,p166_img0.png,165,327
 QUESTION 328,"QUESTION 328
-Refer to the exhibit Mutual redistribution is enabled between RIP and EIGRP on R2 and R5. Which conﬁguration resolves the routing loop for the 192.1631 .024 network?","A. R2:
+Refer to the exhibit Mutual redistribution is enabled between RIP and EIGRP on R2 and R5. Which conﬁguration resolves the routing loop for the 192.168.1 .0/24 network?","A. R2:
 router eigrp 10
 network 181.16.0.0
 redistribute rip metric 1 1 1 1 1
@@ -3576,8 +3576,7 @@ B. Conﬁgure enable secret to log in to the device
 C. Conﬁgure SSH on the remote device to log in using SSH
 D. SSH must be allowed with the transport output ssh command",A,p193_img1.png,193,390
 QUESTION 391,"QUESTION 391
-The network administrator conﬁgured the router for Control Plane Policing so that inbound SSH trafﬁc is policed to 500 kbps. This policy must apply to trafﬁc coming in
-from 10.10.10.0/24 and 192.168.10.0/24 networks.
+The network administrator configured the router for Control Plane Policing so that inbound SSH trafﬁc is policed to 500 kbps. This policy must apply to traffic coming infrom 10.10.10.0/24 and 192.168.10.0/24 networks.
 
 access-list 100 permit ip 10.10.10.0 0.0.0.255 any
 access—list 100 permit tcp 192.168.10.0 0.0.0.255 any eq 23
@@ -3627,9 +3626,7 @@ control-plane
  service-policy input PM-COPP",C,,194,391
 QUESTION 392,"QUESTION 392
 
-Refer to the exhibit. An engineer conﬁgures two ASBRs, 10.4.17.6 and 10.4.15.5, in an OSPF network to redistribute routes from EIGRR. However, both ASBRs show
-the EIGRP routes as equai costs even though the next-hop router 10.4.17.6 is closer to R1. How should the network trafﬁc to the EIGRP preﬁxes be sent via
-10.4.17.6?","A. The administrative distance shouid be raised to 120 from the ASBR 10.4.15.5.
+Refer to the exhibit. An engineer conﬁgures two ASBRs, 10.4.17.6 and 10.4.15.5, in an OSPF network to redistribute routes from EIGRR. However, both ASBRs showthe EIGRP routes as equai costs even though the next-hop router 10.4.17.6 is closer to R1. How should the network trafﬁc to the EIGRP preﬁxes be sent via10.4.17.6?","A. The administrative distance shouid be raised to 120 from the ASBR 10.4.15.5.
 B. The ASBR 10.4.17.6 shouid assign a tag to match and assign a lower metric an R1
 C. The administrative distance should be raised to 120 from the ASBR 10.4.17.6.
 D. The redisdistributed prefixes should be advertised as Type 1.",D,p195_img0.png,194,392
@@ -5683,16 +5680,13 @@ C. Remove default route from spoke routers to establish a spoke-to-spoke tunnel.
 D. Disable EIGRP split honzon on the Tunnel0 interface of the hub router.",D,p278_img0.png,277,528
 QUESTION 529,"QUESTION 529
 
-Router R4 is configured correctly with default OSPF values. A network engineer configured R7 for OSPF. R7 must not be elected as a DR for the segment between
-R4-R7. The adjacency between R4 and R7 failed to form. Which configuration resolves the issue?","A.
+Router R4 is configured correctly with default OSPF values. A network engineer configured R7 for OSPF. R7 must not be elected as a DR for the segment between R4-R7. The adjacency between R4 and R7 failed to form. Which configuration resolves the issue?","A.
 B.
 C.
 D.",C,"p278_img1.png,p278_img2.png,p279_img0.png,p279_img1.png,p279_img2.png",278,529
 QUESTION 530,"QUESTION 530
 An engineer configured a router with this configuration:
-
-The router console starts receiving log message “%SEC-6-IPACCESSLOGP: list DENY_TELNET denied tcp192.168.1.10(10222) (FastEthernet1/0 E416.98ac.116e) -
->192.168.2.20(23), 1 packet”. Which action stops messages on the console while still denying Telnet?","A. Remove log-input keyword from the access list.
+The router console starts receiving log message “%SEC-6-IPACCESSLOGP: list DENY_TELNET denied tcp192.168.1.10(10222) (FastEthernet1/0 E416.98ac.116e) ->192.168.2.20(23), 1 packet”. Which action stops messages on the console while still denying Telnet?","A. Remove log-input keyword from the access list.
 B. Configure a 20 permit ip any any log-input command.
 C. Configure a 20 permit ip any any command.
 D. Replace log-input keyword with the log keyword in the access list.",A,p279_img3.png,279,530
@@ -5764,8 +5758,7 @@ C. R1(config-router)# network 172.16.222.254 0.0.0.0
 D. R1(config-router)# network 172.16.222.254 255.255.255.255",B,"p284_img0.png,p284_img1.png",284,540
 QUESTION 541,"QUESTION 541
 
-Traffic from R3 to the central site does not use alternate paths when R3 cannot reach 10.10.10.2. Traffic on R3 destined to R4 takes an alternate route via 10.10.10.6
-when 10.10.10.4 is not accessible from R3. Which configuration switches traffic destined to 10.10.10.2 from R3 on the alternate path?","A. R3(config)#ip route 192.168.10.1 255.255.255.255 10.10.10.2 track 20
+Traffic from R3 to the central site does not use alternate paths when R3 cannot reach 10.10.10.2. Traffic on R3 destined to R4 takes an alternate route via 10.10.10.6 when 10.10.10.4 is not accessible from R3. Which configuration switches traffic destined to 10.10.10.2 from R3 on the alternate path?","A. R3(config)#ip route 192.168.10.1 255.255.255.255 10.10.10.2 track 20
 B. R6(config)#ip route 10.10.10.3 255.255.255.255 10.0.0.30
 C. R3(config)#track 20 ip sla 20 reachability
 D. R2(config)#ip route 10.10.10.3 255.255.255.255 10.0.0.6",A,p284_img2.png,284,541
@@ -5802,8 +5795,7 @@ D. interface loopback0
    ip ospf interface type network",A,p286_img0.png,286,545
 QUESTION 546,"QUESTION 546
 
-The EIGRP neighborship between the routers is up. However. the app servers are unreachable from the client PC. Which action must the engineer take to resolve the
-issue?","A.  Configure the network 10.1.1.0 command in the EIGRP protocol on R1 only
+The EIGRP neighborship between the routers is up. However. the app servers are unreachable from the client PC. Which action must the engineer take to resolve the issue?","A.  Configure the network 10.1.1.0 command in the EIGRP protocol on R1 only
 B. Configure the neighbor 10.1.2.0 FastEthernet 0/0 command in the EIGRP protocol on R2 only
 C. Configure the no auto-summary command in the EIGRP protocol on both routers
 D. Configure the default network 10.1.2.0.0.0.0.255 command in the EIGRP protocol on R2 only",C,"p287_img0.png,p287_img1.png",286,546
@@ -5959,8 +5951,7 @@ track 2 ip sla 200 reachability
 ip route 0.0.0.0 0.0.0.0 10.1.1.1",C,p290_img0.png,289,551
 QUESTION 552,"QUESTION 552
 
-An engineer implements uRPF to increase security and stop incoming spoofed IP packets. Same asymmetrically routed packets are also blocked after the
-configuration. Which command resolves the issue?","A.  ip verify unicast source reachable-via any
+An engineer implements uRPF to increase security and stop incoming spoofed IP packets. Same asymmetrically routed packets are also blocked after the configuration. Which command resolves the issue?","A.  ip verify unicast source reachable-via any
 B.  ip verify unicast source reachable-via rx
 C. ip verify unicast reverse-path
 D.  ip verify unicast reverse-path any",A,p291_img0.png,290,552
@@ -5971,8 +5962,7 @@ C. P routers support PE to PE VPN tunnel without LSP functionality
 D. P routers provide connectivity between PE devices with MPLS switching",D,,291,553
 QUESTION 554,"QUESTION 554
 
-A CoPP policy is implemented to allow specific control traffic, but the traffic is not matching as expected and is getting unexpected behavior of control traffic. Which
-action resolves the issue?","A. Use match-any instruction in class-map.
+A CoPP policy is implemented to allow specific control traffic, but the traffic is not matching as expected and is getting unexpected behavior of control traffic. Which action resolves the issue?","A. Use match-any instruction in class-map.
 B.  Create a separate class map against each ACL.
 C. Create a separate class map for ICMP traffic.
 D. Use default-class to match ICMP traffic.",A,p291_img1.png,291,554
@@ -5998,22 +5988,19 @@ C. R6(config)#ip sla responder udp-echo ipaddress 10.60.60.6 po 5000
 D. R6(config)#ip sla schedule 10 life forever start-time now",A,p293_img0.png,292,557
 QUESTION 558,"QUESTION 558
 
-Jitter on the link between R101 and R201 was tested for voice traffic over port 16384 without the control communication on port 1967. Which command enables R201
-to receive RTT for the configured IP SLA?","A.  ip sla responder tcp-connect port 1967
+Jitter on the link between R101 and R201 was tested for voice traffic over port 16384 without the control communication on port 1967. Which command enables R201 to receive RTT for the configured IP SLA?","A.  ip sla responder tcp-connect port 1967
 B. ip sla responder udp-echo ipaddress 2.2.2.2 port 16384
 C. ip sla responder udp-echo ipaddress 1.1.1.1 port 16384
 D. ip sla responder auto-register 1.1.1.1",B,"p293_img1.png,p293_img2.png",293,558
 QUESTION 559,"QUESTION 559
 
-An engineer recently implemented uRPF by configuring the ip verify unicast source reachable-via rx command on interface gi0/3. The engineer noticed right after
-implementing uRPF that an inbound packet on the gi0/3 interface with a source address of 172.16.3.251 was dropped. Which action resolves the issue?","A. Configure uRPF loose mode to forward the packet.
+An engineer recently implemented uRPF by configuring the ip verify unicast source reachable-via rx command on interface gi0/3. The engineer noticed right after implementing uRPF that an inbound packet on the gi0/3 interface with a source address of 172.16.3.251 was dropped. Which action resolves the issue?","A. Configure uRPF loose mode to forward the packet.
 B. Permit the 172.16.3.251 in the inbound ACL on interface gi0/3.
 C. Remove inbound ACL from the interface gi0/3 to allow 172.16.3.251.
 D. Configure uRPF strict mode to forward the packet.",A,p294_img0.png,293,559
 QUESTION 560,"QUESTION 560
 
-An engineer recently modified the configuration for area 3 to accept only type 1, 2, and 3 LSAs. Immediately after the changes, users connected to router R6 began to
-report connectivity issues. Which configuration restores connectivity to R6 and meets the requirement?","A.
+An engineer recently modified the configuration for area 3 to accept only type 1, 2, and 3 LSAs. Immediately after the changes, users connected to router R6 began to report connectivity issues. Which configuration restores connectivity to R6 and meets the requirement?","A.
 B.
 C.
 D.",D,"p294_img1.png,p294_img2.png,p295_img0.png,p295_img1.png,p295_img2.png",294,560
@@ -6036,23 +6023,19 @@ C.
 D.",D,"p297_img0.png,p297_img1.png,p297_img2.png,p297_img3.png,p297_img4.png,p297_img5.png",296,563
 QUESTION 564,"QUESTION 564
 
-An engineer notices a connectivity problem between routers R1 and R2. The frequency of this problem is high during peak business hours. Which action resolves the
-issue?","A. Increase the available bandwidth between R1 and R2.
+An engineer notices a connectivity problem between routers R1 and R2. The frequency of this problem is high during peak business hours. Which action resolves the issue?","A. Increase the available bandwidth between R1 and R2.
 B. Decrease the EIGRP keepalive and hold down timers on R1 and R2.
 C. Increase the MTU on the interfaces that connect R1 and R2.
 D. Set static EIGRP neighborship between R1 and R2.",A,p298_img0.png,298,564
 QUESTION 565,"QUESTION 565
 
-The engineer configured route redistribution in the network but soon received reports that R2 cannot access 192.168.7.0/24 and 192.168.15.0/24 subnets. Which
-configuration resolves the issue?","A.
+The engineer configured route redistribution in the network but soon received reports that R2 cannot access 192.168.7.0/24 and 192.168.15.0/24 subnets. Which configuration resolves the issue?","A.
 B.
 C.
 D.",B,"p298_img1.png,p299_img0.png,p299_img1.png,p299_img2.png,p299_img3.png,p299_img4.png",298,565
 QUESTION 566,"QUESTION 566
 
-Router R1 (head office) is not always preferred for all users to access hosting services R1 should be primary, and the DR site should only be used if router R1 or its
-uplink fails.
-Which configuration resolves the issue?","A.
+Router R1 (head office) is not always preferred for all users to access hosting services R1 should be primary, and the DR site should only be used if router R1 or its uplink fails. Which configuration resolves the issue?","A.
 B.
 C.
 D.",A,"p300_img0.png,p300_img1.png,p300_img2.png,p300_img3.png,p300_img4.png",300,566
@@ -6068,8 +6051,7 @@ C. PE removes the outer label before sending to the P router.
 D.  It improves P router performance by not performing multiple label lookup.",A,,301,568
 QUESTION 569,"QUESTION 569
 
-An engineer configures router A to mark all inside to outside traffic from network 192.168.1.0. except from host 192.168.1.1. with critical IP precedence. The policy did
-not work as expected. Which configuration resolves the issue?","A.
+An engineer configures router A to mark all inside to outside traffic from network 192.168.1.0. except from host 192.168.1.1. with critical IP precedence. The policy did not work as expected. Which configuration resolves the issue?","A.
 B.
 C.
 D.",D,"p301_img0.png,p302_img0.png,p302_img1.png,p302_img2.png,p302_img3.png",301,569
@@ -6489,8 +6471,12 @@ R1(config-router)#redistribute rip
 R1(config-router)#default-metric 10000 100 255 100 1500",D,"p324_img0.png,p324_img1.png",324,611
 QUESTION 612,"QUESTION 612
 
-A network administrator added area 5 to the OSPF network, and now users connected to router R2 cannot access the server connected to R8. Which configuration
-resolves the issue?
+A network administrator added area 5 to the OSPF network, and now users connected to router R2 cannot access the server connected to R8. Which configuration resolves the issue?","A. R9#
+router ospf 1
+ router-id 10.9.9.9
+ area 7 virtual-link 10.4.4.4
+ network 10.1.9.0 0.0.0.3 area 5
+ network 10.8.2.0 0.0.0.3 area 7
 R4#
 router ospf 1
  router-id 10.4.4.4
@@ -6532,12 +6518,7 @@ router ospf 1
  router-id 10.4.4.4
  area 5 virtual-link 10.9.9.9
  network 10.8.2.0 0.0.0.3 area 7
- network 10.11.1.0 0.0.0.3 area 2","A. R9#
-router ospf 1
- router-id 10.9.9.9
- area 7 virtual-link 10.4.4.4
- network 10.1.9.0 0.0.0.3 area 5
- network 10.8.2.0 0.0.0.3 area 7",A,"p324_img2.png,p325_img0.png",324,612
+ network 10.11.1.0 0.0.0.3 area 2",A,"p324_img2.png,p325_img0.png",324,612
 QUESTION 613,"QUESTION 613
 
 The IP SLA probes 1, 2 and 3 verify the reachability of three distinct DNS servers hosted by ISP1. If all DNS servers are unreachable, the router should failover to
