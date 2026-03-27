@@ -4981,8 +4981,7 @@ PE(config)#router ospf 10 vrf SharedSites
 PE(config-router)#network 0.0.0.0 255.255.255.255 area 1",B,p245_img1.png,245,477
 QUESTION 478,"QUESTION 478
 
-The IT router has been configured with the Science VRF and the interfaces have been assigned to the VRF. Which set of configurations advertises Science-1 and
-Science-2 routes using EIGRP AS 111?","A. router eigrp 1
+The IT router has been configured with the Science VRF and the interfaces have been assigned to the VRF. Which set of configurations advertises Science-1 and Science-2 routes using EIGRP AS 111?","A. router eigrp 1
      address-family ipv4 vrf Science autonomous-system 111
      network 192.168.1.0 
      network 192.168.2.0
@@ -4999,8 +4998,14 @@ D. router eigrp 111
      network 192.168.2.0",A,"p246_img0.png,p247_img0.png",246,478
 QUESTION 479,"QUESTION 479
 
-An engineer must configure PBR on R1 to reach to 10.2.2.0/24 via R3 AS64513 as the primary path and a backup route through default route via R2 AS64513. All
-BGP routes are in the routing table of R1, but a static default route overrides BGP routes. Which PBR configuration achieves the objective?
+An engineer must configure PBR on R1 to reach to 10.2.2.0/24 via R3 AS64513 as the primary path and a backup route through default route via R2 AS64513. All BGP routes are in the routing table of R1, but a static default route overrides BGP routes. Which PBR configuration achieves the objective?","A. access-list 100 permit ip 10.1.1.0 0.0.0.255 10.2.2.0 0.0.0.255
+!
+route-map PBR permit 10 
+ match ip address 100
+B. access-list 100 permit ip 10.1.1.0 0.0.0.255 10.2.2.0 0.0.0.255
+!
+route-map PBR permit 10
+ match ip address 100
 set ip next-hop 10.3.3.1
 set ip next-hop recursive 10.3.3.1
 C. access-list 100 permit ip 10.1.1.0 255.255.255.0 10.2.2.0 255.255.255.0
@@ -5012,14 +5017,7 @@ D. access-list 100 permit ip 10.1.1.0 255.255.255.0 10.2.2.0 255.255.255.0
 !
 route-map PBR permit 10
  match ip address 100
- set ip next-hop recursive 10.3.3.1","A. access-list 100 permit ip 10.1.1.0 0.0.0.255 10.2.2.0 0.0.0.255
-!
-route-map PBR permit 10 
- match ip address 100
-B. access-list 100 permit ip 10.1.1.0 0.0.0.255 10.2.2.0 0.0.0.255
-!
-route-map PBR permit 10
- match ip address 100",B,p247_img1.png,247,479
+ set ip next-hop recursive 10.3.3.1",B,p247_img1.png,247,479
 QUESTION 480,"QUESTION 480
 
 An administrator configures a router to stop using a particular default route if the DNS server 8.8.8.8 is not reachable through that route. However, this configuration
@@ -5319,8 +5317,11 @@ C. RT
 D. VRF",B,,262,504
 QUESTION 505,"QUESTION 505
 
-An engineer must advertise LAN network 192.168.1.0 of router A to router B through OSPF. The engineer notices that router B was configured, but the LAN network of
-router A is not in the routing table of router B. Which configuration on router A resolves the problem?
+An engineer must advertise LAN network 192.168.1.0 of router A to router B through OSPF. The engineer notices that router B was configured, but the LAN network of router A is not in the routing table of router B. Which configuration on router A resolves the problem?","A. interface Serial0/0/0
+ ip address 10.0.0.1 255.255.255.0
+ negotiation auto
+ ipv6 enable
+ ospfv3 1 ipv4 area 1
 router ospfv3 1
  address-family ipv4 unicast
  area 1 range 192.168.1.0 255.255.255.0
@@ -5365,11 +5366,7 @@ interface Serial0/0/0
 router ospfv3 1
  address-family ipv4 unicast
  router-id 1.1.1.1
-exit-address-family","A. interface Serial0/0/0
- ip address 10.0.0.1 255.255.255.0
- negotiation auto
- ipv6 enable
- ospfv3 1 ipv4 area 1",D,p263_img0.png,262,505
+exit-address-family",D,p263_img0.png,262,505
 QUESTION 506,"QUESTION 506
 
 A network engineer configured routers R1 and R2 with MP-BGP. The engineer noticed that the routers cannot exchange any IPv6 routes; however, the IPv4 neighbor relationship is working fine. Which configuration must the engineer apply to router R2 to exchange IPv6 routes?","A. ipv6 unicast-routing
@@ -6677,8 +6674,11 @@ C. BFD echo packets are sent to the same source IP and different destination IP 
 D. When BFD declares a failure on the primary IGP path, the router on the peer router chooses to use the secondary path.",B,,334,630
 QUESTION 631,"QUESTION 631
 
-After an engineer modified the configuration for area 7 to permit type 1, 2, and 7 LSAs only, users connected to router R9 reported that they could no longer access the
-Internet. Which configuration restores Internet access to users on R9 and permits only LSA type 1, 2, and 7?
+After an engineer modified the configuration for area 7 to permit type 1, 2, and 7 LSAs only, users connected to router R9 reported that they could no longer access the Internet. Which configuration restores Internet access to users on R9 and permits only LSA type 1, 2, and 7?","A. R4#
+router ospf 1
+ area 7 nssa no-summary
+ network 10.5.1.0 0.0.0.3 area 0
+ network 10.8.2.0 0.0.0.3 area 7
 R9#
 router ospf 1
  area 7 nssa
@@ -6713,10 +6713,6 @@ R9#
 router ospf 1
  area 7 nssa
  redistribute eigrp 10 subnets
- network 10.8.2.0 0.0.0.3 area 7","A. R4#
-router ospf 1
- area 7 nssa no-summary
- network 10.5.1.0 0.0.0.3 area 0
  network 10.8.2.0 0.0.0.3 area 7",A,p334_img0.png,334,631
 QUESTION 632,"QUESTION 632
 
@@ -6769,8 +6765,9 @@ router bgp 100
  neighbor 172.16.1.2 password cisco",D,p336_img1.png,336,635
 QUESTION 636,"QUESTION 636
 
-A user from Area-55 cannot access the HTTPS services running on the Area-0 server farm. An engineer identifies that the routing table of SW-1 is not learning the
-Area-55 routes. Which configuration resolves the issue?
+A user from Area-55 cannot access the HTTPS services running on the Area-0 server farm. An engineer identifies that the routing table of SW-1 is not learning the Area-55 routes. Which configuration resolves the issue?","A. R1 
+router ospf 100
+ area 9 virtual-link 10.12.9.1
 R3
 router ospf 100
  area 9 virtual-link 1.23.55.2
@@ -6791,9 +6788,7 @@ router ospf 100
  area 9 virtual-link 10.110.0.1
 R2
 router ospf 100
- area 9 virtual-link 1.12.9.1","A. R1 
-router ospf 100
- area 9 virtual-link 10.12.9.1",C,p337_img0.png,337,636
+ area 9 virtual-link 1.12.9.1",C,p337_img0.png,337,636
 QUESTION 637,"QUESTION 637
 
 An engineer investigates an IPv6 EIGRP neighbor adjacency issue that sees the neighbors flapping and issued a ping from R1 to its directly connected neighbor. The
