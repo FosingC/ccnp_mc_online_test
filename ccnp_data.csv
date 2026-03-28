@@ -132,7 +132,7 @@ B. debug ip sla error
 C. debug ip routing
 D. debug ip packet",B,p13_img1.png,13,21
 QUESTION 22,"QUESTION 22
-Which configuration enabled the VRF that is labeled “Inet” on FastEthernet0/0?","A. R1(config)# ip vrf Inet
+Which configuration enabled the VRF that is labeled ��Inet�� on FastEthernet0/0?","A. R1(config)# ip vrf Inet
 R1(config-vrf)#ip vrf FastEthernet0/0
 B. R1(config)#ip vrf Inet FastEthernet0/0
 C. R1(config)# ip vrf Inet
@@ -728,7 +728,7 @@ B. Apply the outbound distribution list on R5 toward R4 in OSPF.
 C. Change the administrative distance of OSPF to 200 on R5.
 D. Redistribute OSPF into EIGRP on R4.",A,p48_img0.png,47,115
 QUESTION 116,"QUESTION 116
-An engineer configured a company’s multiple area OSPF head office router and Site A cisco routers with VRF lite. Each site router is connected to a PE router of an
+An engineer configured a company��s multiple area OSPF head office router and Site A cisco routers with VRF lite. Each site router is connected to a PE router of an
 MPLS backbone.
 
 After finishing both site router configurations, none of the LSA 3,4 5, and 7 are installed at Site A router. Which configuration resolves this issue?","A. configure capability vrf-lite on Site A and its connected PE router under router ospf 1 vrf abc
@@ -737,7 +737,7 @@ C. configure capability vrf-lite on both PE routers connected to Head Office and
 D. configure capability vrf-lite on Head Office and Site A routers under router ospf 1 vrf abc",D,p48_img1.png,48,116
 QUESTION 117,"QUESTION 117
 Refer to the exhibit. A network administrator is discovering a Cisco Catalyst 9300 and a Cisco WLC 3504 in Cisco DNA Center. The Catalyst 9300 is added
-successfully However the WLC is showing [ error “uncontactable” when the administrator tries to add it in Cisco DNA Center. Which action discovers WLC in Cisco
+successfully However the WLC is showing [ error ��uncontactable�� when the administrator tries to add it in Cisco DNA Center. Which action discovers WLC in Cisco
 DNA Center successfully?","A. Copy the .cert file from the Cisco DNA Center on the USB and upload it to the WLC 3504.
 B. Delete the WLC 3504 from Cisco DNA Center and add it to Cisco DNA Center again.
 C. Add the WLC 3504 under the hierarchy of the Catalyst 9300 connected devices.
@@ -782,9 +782,9 @@ D. It denies traffic by inspecting neighbor discovery packets for specific patte
 E. It blocks certain traffic by inspecting DHCP packets for specific sources.",AC,,52,123
 QUESTION 124,"QUESTION 124
 What is the output of the following command:
-show ip vrf","A. Show’s default RD values
+show ip vrf","A. Show��s default RD values
 B. Displays IP routing table information associated with a VRF
-C. Show’s routing protocol information associated with a VRF.
+C. Show��s routing protocol information associated with a VRF.
 D. Displays the ARP table (static and dynamic entries) in the specified VRF",A,,53,124
 QUESTION 125,"QUESTION 125
 An engineer configured access list NON-CISCO in a policy to influence routes. What are the two effects of this route map configuration? (Choose two.)","A. Packets are not evaluated by sequence 10.
@@ -918,14 +918,14 @@ B. Configure logging history 3
 C. Configure logging history 4
 D. Configure logging history 5",D,p67_img0.png,67,146
 QUESTION 147,"QUESTION 147
-Refer to the exhibit. An IPv6 network was newly deployed in the environment and the help desk reports that R3 cannot SSH to the R2’s Loopback interface. Which
+Refer to the exhibit. An IPv6 network was newly deployed in the environment and the help desk reports that R3 cannot SSH to the R2��s Loopback interface. Which
 action resolves the issue?","A. Modify line 10 of the access list to permit instead of deny.
 B. Remove line 60 from the access list.
 C. Modify line 30 of the access list to permit instead of deny.
 D. Remove line 70 from the access list.",C,p67_img1.png,67,147
 QUESTION 148,"QUESTION 148
 An engineer configured SNMP notifications sent to the management server using authentication and encrypting data with DES. An error in the response PDU is
-received as “UNKNOWNUSERNAME. WRONGDIGEST”. Which action resolves the issue?","A. Configure the correct authentication password using SNMPv3 authPriv.
+received as ��UNKNOWNUSERNAME. WRONGDIGEST��. Which action resolves the issue?","A. Configure the correct authentication password using SNMPv3 authPriv.
 B. Configure the correct authentication password using SNMPv3 authNoPriv.
 C. Configure correct authentication and privacy passwords using SNMPv3 authNoPriv.
 D. Configure correct authentication and privacy passwords using SNMPv3 authPriv.",D,,68,148
@@ -1306,34 +1306,34 @@ access-list 101 permit ip 192.168.4.0 0.0.0.255 192.168.5.0 0.0.0.255
 route-map PBR1 permit 10
 match ip address 101
 set ip next-hop 172.18.1.2
-！
+��
 interface Ethernet0/3
 ip policy route-map PBR1
 B. access-list 101 permit tcp 192.168.3.0 0.0.0.255 192.168.5.0 0.0.0.255 eq 23
 access-list 101 permit tcp 192.168.4.0 0.0.0.255 192.168.5.0 0.0.0.255 eq 23
-！
+��
 route-map PBR1 permit 10
 match ip address 101
 set ip next-hop 172.18.1.2
-！
+��
 interface Ethernet0/1
 ip policy route-map PBR1
 C. access-list 101 permit tcp 192.168.3.0 0.0.0.255 192.168.5.0 0.0.0.255 eq 23
 access-list 101 permit tcp 192.168.4.0 0.0.0.255 192.168.5.0 0.0.0.255 eq 23
-！
+��
 route-map PBR1 permit 10
 match ip address 101
 set ip next-hop 172.18.1.2
-！
+��
 interface Ethernet0/3
 ip policy route-map PBR1
 D. access-list 101 permit ip 192.168.3.0 0.0.0.255 192.168.5.0 0.0.0.255
 access-list 101 permit ip 192.168.4.0 0.0.0.255 192.168.5.0 0.0.0.255
-！
+��
 route-map PBR1 permit 10
 match ip address 101
 set ip next-hop 172.18.1.2
-！
+��
 interface Ethernet0/1
 ip policy route-map PBR1",C,p91_img1.png,91,197
 QUESTION 198,"QUESTION 198
@@ -1558,7 +1558,7 @@ vrf forwarding Science
 no shut",A,p107_img0.png,107,224
 QUESTION 225,"QUESTION 225
 
-A network administrator is tasked to permit http and https traffic only toward the internet from the User1 laptop to adhere to company’s security policy. The
+A network administrator is tasked to permit http and https traffic only toward the internet from the User1 laptop to adhere to company��s security policy. The
 administrator can still ping to www.cisco.com Which interface should the access list 101 be applied to resolve this issue?","A. Interface G0/48 in the incoming direction
 B. Interface G0/0 in the outgoing direction.
 C. Interface S1/0 in the outgoing direction.
@@ -1577,10 +1577,10 @@ D. Configure the network command under EIGRP address family ipv4",B,p109_img1.pn
 QUESTION 228,"QUESTION 228
 Refer to the exhibit.
 
-A network administrator reviews the branch router console log to troubleshoot the OSPF adjacency issue with the DR router. Which action resolves this issue?","A. Conﬁgure the WAN interface for DR site in the related OSPF area.
+A network administrator reviews the branch router console log to troubleshoot the OSPF adjacency issue with the DR router. Which action resolves this issue?","A. Con?gure the WAN interface for DR site in the related OSPF area.
 B. Stabilize the DR site flapping link to establish OSPF adjacency.
 C. Advertise the branch WAN interface matching subnet for the DR site.
-D. Conﬁgure matching hello and dead intervals between sites-",C,p110_img0.png,109,228
+D. Con?gure matching hello and dead intervals between sites-",C,p110_img0.png,109,228
 QUESTION 229,"QUESTION 229
 How is VPN routing information distributed in an MPLS network?","A. The top level of the customer data packet directs it to the correct CE device.
 B. It is established using VPN lPsec peers.
@@ -1589,7 +1589,7 @@ D. It is controlled using of VPN target communities.",D,,110,229
 QUESTION 230,"QUESTION 230
 Refer to the exhibit.
 
-The network administrator can see the DHCP discovery packet in R1, but R2 is not replying to the DHCP request The R1 related interface is conﬁgured with the DHCP
+The network administrator can see the DHCP discovery packet in R1, but R2 is not replying to the DHCP request The R1 related interface is con?gured with the DHCP
 helper address. If the PC is directly connected to the Fa0/1 interface on R2, the DHCP server ssigns as IP address from the DHCP pool to the PC.
 Which two commands resolve this issue? (Choose two.)","A. service dhcp command on R1
 B. ip dhcp relay information trust-all command on R2
@@ -1599,26 +1599,26 @@ E. ip dhcp option 82 command on R2",AB,p111_img0.png,110,230
 QUESTION 231,"QUESTION 231
 
 Refer to the exhibit. BGP and EIGRP are mutually redistributed on R3, and EIGRP and OSPF are mutually redistributed on R1 . Users report packet loss and
-interruption of service to applications hosted on the 10.1.1.0/24 preﬁx.
+interruption of service to applications hosted on the 10.1.1.0/24 pre?x.
 An engineer tested the link from R3 to R4 with no packet loss present but has noticed frequent routing changes on R3 when running the debug ip route command.
-Which action stabilizes the service?","A. Tag the 10.1.1.0/24 preﬁx and deny the preﬁx from being redistributed into OSPF on R1.
-B. Reduce frequent OSPF SPF calculations on R3 that cause a high CPU and packet loss on trafﬁc traversing R3.
-C. Place an OSPF distribute-list outbound on R3 to block the 10.1.1.0/24 preﬁx from being advertised back to R3.
-D. Repeat the test from R4 using lCMP ping on the local 10.1.1.0/24 preﬁx, and ﬁx any Layer 2 errors on the host or switch side of the subnet.",A,p111_img1.png,111,231
+Which action stabilizes the service?","A. Tag the 10.1.1.0/24 pre?x and deny the pre?x from being redistributed into OSPF on R1.
+B. Reduce frequent OSPF SPF calculations on R3 that cause a high CPU and packet loss on traf?c traversing R3.
+C. Place an OSPF distribute-list outbound on R3 to block the 10.1.1.0/24 pre?x from being advertised back to R3.
+D. Repeat the test from R4 using lCMP ping on the local 10.1.1.0/24 pre?x, and ?x any Layer 2 errors on the host or switch side of the subnet.",A,p111_img1.png,111,231
 QUESTION 232,"QUESTION 232
 
-Refer to the exhibit PC-2 failed to establish a Telnet connection to the terminal server. Which conﬁguration resolves the issue?","A. Gateway-Router(conﬁg)#ipv6 access-list Default_Access
-Gateway-Router(conﬁg-ipv6-acl)#sequence 25 permit tcp host 2018:DB1:A:B::2 host 2018:DB1:A:C::1 eq telnet
-B. Gateway-Routed(conﬁg)#ipv6 access-list Default_Access
-Gateway-Router(conﬁg-ipv6-acl)#permit tcp host 2018:0B1:A:B::2 host 2018:0B1:A:C::1 eq telnet
-C. Gateway-Router(conﬁg)#ipv6 access-list Default_Access
-Gateway-Router(conﬁg-ipv6-acl)#no sequence 20
-Gateway-Router(conﬁg-ipv6-acl)#sequence 6 permit tcp host 2018:DB1:A:B::2 host 2018:0B1:A:C::1 eq telnet
-D. Gateway-Router(conﬁg)#lpv6 access-list Default_Access
-Gateway-Router(conﬁg-ipv6-acl)#sequence 15 permit tcp host 2018:DB1:A:B::2 host 2018:DB1:A:C::1 eq telnet",D,p112_img0.png,112,232
+Refer to the exhibit PC-2 failed to establish a Telnet connection to the terminal server. Which con?guration resolves the issue?","A. Gateway-Router(con?g)#ipv6 access-list Default_Access
+Gateway-Router(con?g-ipv6-acl)#sequence 25 permit tcp host 2018:DB1:A:B::2 host 2018:DB1:A:C::1 eq telnet
+B. Gateway-Routed(con?g)#ipv6 access-list Default_Access
+Gateway-Router(con?g-ipv6-acl)#permit tcp host 2018:0B1:A:B::2 host 2018:0B1:A:C::1 eq telnet
+C. Gateway-Router(con?g)#ipv6 access-list Default_Access
+Gateway-Router(con?g-ipv6-acl)#no sequence 20
+Gateway-Router(con?g-ipv6-acl)#sequence 6 permit tcp host 2018:DB1:A:B::2 host 2018:0B1:A:C::1 eq telnet
+D. Gateway-Router(con?g)#lpv6 access-list Default_Access
+Gateway-Router(con?g-ipv6-acl)#sequence 15 permit tcp host 2018:DB1:A:B::2 host 2018:DB1:A:C::1 eq telnet",D,p112_img0.png,112,232
 QUESTION 233,"QUESTION 233
 
-Refer to the exhibit. AS111 is receiving its own routes from AS200 causing a loop in the network. Which conﬁguration provides loop prevention?","A. router bgp 111
+Refer to the exhibit. AS111 is receiving its own routes from AS200 causing a loop in the network. Which con?guration provides loop prevention?","A. router bgp 111
 neighbor 195.1.2.2 as-override
 no neighbor 195.1.1.1 allowas-in
 B. router bgp 111
@@ -1631,8 +1631,8 @@ D. router bgp 111
 neighbor 195.1.1.1 as-override
 no neighbor 195.1.2.2 allowas-in",C,"p113_img0.png,p113_img1.png",112,233
 QUESTION 234,"QUESTION 234
-IPv6 is enabled in the infrastructure to support customers with an IPv6 network over WAN and to connect the head ofﬁce to branch ofﬁces in the local network. One of
-the customers is already running IPv6 and wants to enable IPv6 over the DMVPN network infrastnicture between the headend and branch sites. Which conﬁguration
+IPv6 is enabled in the infrastructure to support customers with an IPv6 network over WAN and to connect the head of?ce to branch of?ces in the local network. One of
+the customers is already running IPv6 and wants to enable IPv6 over the DMVPN network infrastnicture between the headend and branch sites. Which con?guration
 command must be applied to establish an mGRE IPv6 tunnel neighborship?","A. tunnel protection mode ipv6
 B. ipv6 unicast-routing
 C. ipv6 nhrp holdtime 30
@@ -1653,9 +1653,9 @@ ip address 4.4.4.4 255.255.255.0
 ip ospf network point-to-point",D,p114_img0.png,114,235
 QUESTION 236,"QUESTION 236
 A network administrator performed a Compact Flash Memory upgrade on a Cisco Catalyst 6509 Switch. Everything is functioning normally except SNMP, which was
-conﬁgured to monitor the bandwidth of key interfaces but the interface indexes are changed. Which global conﬁguration resolves the issue?","A. snmp iﬁndex persist
+con?gured to monitor the bandwidth of key interfaces but the interface indexes are changed. Which global con?guration resolves the issue?","A. snmp i?ndex persist
 B. snmp ifindex permanent
-C. snmp-server iﬁndex permanent
+C. snmp-server i?ndex permanent
 D. snmp-server ifindex persist",D,,114,236
 QUESTION 237,"QUESTION 237
 Which mechanism must be chosen to optimize the reconvergence time for OSPF at company location 408811049 that is less CPU-intensive than reducing the hello
@@ -1669,11 +1669,11 @@ Refer to Ihe exhibit. A network administrator has developed a Python script on t
 fails. Which action resolves this issue?","A. The SSH service must be enabled with the crypto key generate rsa command.
 B. The SCP service must be enabled with the ip scp server enable command.
 C. The SSH access must be allowed on the VTY lines using the transport input ssh command.
-D. The Python interpreter must ﬁrst be enabled with the guestshell enable command.",B,p115_img0.png,115,238
+D. The Python interpreter must ?rst be enabled with the guestshell enable command.",B,p115_img0.png,115,238
 QUESTION 239,"QUESTION 239
 Refer to the exhibit.
 
-An engineer conﬁgured BGP between routers R1 and R3. The BGP peers cannot establish neighbor adjacency to be able to exchange routes. Which conﬁguration
+An engineer con?gured BGP between routers R1 and R3. The BGP peers cannot establish neighbor adjacency to be able to exchange routes. Which con?guration
 resolves this issue?
 router bgp 6502
 address-family ipv6
@@ -1698,9 +1698,9 @@ D. Police the cir for BGP, conform-action transmit, and exceed action transmit",
 QUESTION 241,"QUESTION 241
 
 Refer to the exhibit. Which action resolves the adjacency issue?","A. Match the hello interval timers-
-B. Conﬁgure the same EIGRP process IDs.
+B. Con?gure the same EIGRP process IDs.
 C. Match the authentication keys.
-D. Conﬁgure the same autonomous system numbers.",D,p116_img0.png,116,241
+D. Con?gure the same autonomous system numbers.",D,p116_img0.png,116,241
 QUESTION 242,"QUESTION 242
 Refer to the exhibit.
 
@@ -1727,19 +1727,19 @@ periodic daily 8:00 to 16:30",B,p117_img1.png,117,243
 QUESTION 244,"QUESTION 244
 Refer to the exhibit:
 
-When the FastEthemet0/1 goes down, the route to 172.29.0.0/16 via 192.168.253.2 is not installed in the RIB. Which action solves the issue?","A. Conﬁgure feasible distance greater than the successors feasible distance.
-B. Conﬁgure feasible distance greater than the reported distance.
-C. Conﬁgure reported distance greater than the successors feasible distance
-D. Conﬁgure reported distance greater than the feasible distance.",B,p118_img0.png,118,244
+When the FastEthemet0/1 goes down, the route to 172.29.0.0/16 via 192.168.253.2 is not installed in the RIB. Which action solves the issue?","A. Con?gure feasible distance greater than the successors feasible distance.
+B. Con?gure feasible distance greater than the reported distance.
+C. Con?gure reported distance greater than the successors feasible distance
+D. Con?gure reported distance greater than the feasible distance.",B,p118_img0.png,118,244
 QUESTION 245,"QUESTION 245
-Users report issues with reachability between areas as soon as an engineer conﬁgured summary routes between areas in a multiple area OSPF Autonomous system.
-Which action resolves the issue?","A. Conﬁgure the area range command on the ABR.
-B. Conﬁgure the summary-address command on the ASBR.
-C. Conﬁgure the area range command on the ASBR.
-D. Conﬁgure the summary-address command on the ABR.",A,,118,245
+Users report issues with reachability between areas as soon as an engineer con?gured summary routes between areas in a multiple area OSPF Autonomous system.
+Which action resolves the issue?","A. Con?gure the area range command on the ABR.
+B. Con?gure the summary-address command on the ASBR.
+C. Con?gure the area range command on the ASBR.
+D. Con?gure the summary-address command on the ABR.",A,,118,245
 QUESTION 246,"QUESTION 246
 
-Refer to the exhibit. An engineer his conﬁgured policy-based routing and applied the conﬁguration to the correct interface. How is the conﬁguration applied to the traffic
+Refer to the exhibit. An engineer his con?gured policy-based routing and applied the con?guration to the correct interface. How is the con?guration applied to the traffic
 that matches the access list?","A. It is dropped.
 B. It is sent to 209.165.202.131.
 C. It is sent to 209.165.202.129.
@@ -1780,7 +1780,7 @@ D. interface Tunnel 1
 QUESTION 248,"QUESTION 248
 Refer to the exhibit.
 
-An engineer conﬁgured SNMP communities on the Core_Sw1 , but the SNMP server cannot obtain information from core_Sw1 . Which conﬁguration resolves this
+An engineer con?gured SNMP communities on the Core_Sw1 , but the SNMP server cannot obtain information from core_Sw1 . Which con?guration resolves this
 issue?","A. access-list 20 permit 10.221.10.11
 B. sump-server group NETADMIN v3 priv read NETVIEW write NETADMIN access 22
 C. snmp-server group NETVIEW v2c priv read NETVIEVV access 20
@@ -1789,7 +1789,7 @@ QUESTION 249,"QUESTION 249
 Refer to the exhibit.
 
 A network administrator is trying to access a branch router using TACACS+ usemame and password credentials, but the administrator cannot log in to the router
-because the WAN connectivity is down. The branch router has following AAA conﬁguration:
+because the WAN connectivity is down. The branch router has following AAA con?guration:
 aaa new-model
 aaa authorization commands 15 default group tacacs+
 aaa accounting commands 1 default stop-only group tacacs+
@@ -1803,8 +1803,8 @@ D. aaa authentication login default group tacacs+ enable",C,p120_img1.png,120,24
 QUESTION 250,"QUESTION 250
 
 Refer to the exhibits.
-A network is under a cyberattack. A network engineer connected to R1 by SSH and enabled the terminal monitor via SSH session to ﬁnd the source and destination of
-the attacks The session was ﬂooded with messages, which made it impossible for the engineer to
+A network is under a cyberattack. A network engineer connected to R1 by SSH and enabled the terminal monitor via SSH session to ?nd the source and destination of
+the attacks The session was ?ooded with messages, which made it impossible for the engineer to
 troubleshoot the issue. Which command resolves this issue on R1?","A. #terminal no monitor
 B. (config)#terminal no monitor
 C. (config)#no terminal monitor
@@ -1819,10 +1819,10 @@ D. R2 and R5",C,p121_img1.png,121,251
 QUESTION 252,"QUESTION 252
 Refer to the exhibit.
 
-AS65535 iBGP is conﬁgured for directly connected neighbors. R4 cannot ping or traceroute network 192.168.100.0/24. Which action resolves this issue?","A. Conﬁgure R4 as a route reﬂector server and conﬁgure R2 and R3 as route reﬂector clients
-B. Conﬁgure R4 as a route reﬂector server and conﬁgure R1 as a route reﬂector client
-C. Conﬁgure R1 as a route reﬂector server and conﬁgure R4 as a route reﬂector client.
-D. Conﬁgure R1 as a route reﬂector server and conﬁgure R2 and R3 as route reﬂector clients.",B,p122_img0.png,122,252
+AS65535 iBGP is con?gured for directly connected neighbors. R4 cannot ping or traceroute network 192.168.100.0/24. Which action resolves this issue?","A. Con?gure R4 as a route re?ector server and con?gure R2 and R3 as route re?ector clients
+B. Con?gure R4 as a route re?ector server and con?gure R1 as a route re?ector client
+C. Con?gure R1 as a route re?ector server and con?gure R4 as a route re?ector client.
+D. Con?gure R1 as a route re?ector server and con?gure R2 and R3 as route re?ector clients.",B,p122_img0.png,122,252
 QUESTION 253,"QUESTION 253
 What is a characteristic of Layer 3 MPLS VPNs?","A. LSP signaling requires the use of unnumbered IP links for traffic engineering.
 B. Traffic engineering supports multiple IGP instances
@@ -2253,7 +2253,7 @@ flow-destination 10.221.10.11
 D. interface Ethernet0/0
 flow-destination 10.221.10.11",B,p149_img0.png,148,289
 QUESTION 290,"QUESTION 290
-If HTTP packet from 10.1.1.0/24 to a destination in 10.100.100.0/24 must be directed to a next-hop of 10.2.2.2, two hops away from the router. Which conﬁguration
+If HTTP packet from 10.1.1.0/24 to a destination in 10.100.100.0/24 must be directed to a next-hop of 10.2.2.2, two hops away from the router. Which con?guration
 meets the requirements?","A. access-list 100 permit tcp 10.1.1.0 0.0.0.255 host 10.100.100.100 eq http
 !
 route-map POLICY deny 10
@@ -2314,7 +2314,7 @@ C. Add the eigrp stub connected static command
 D. Remove the eigrp stub connected command",B,,150,293
 QUESTION 294,"QUESTION 294
 Refer to the exhibit. A network administrator successfully logs in to a switch using SSH from a RADIUS server When the network administrator uses a console port to
-access the switch the RADIUS server returns shell:privlvl=15” and the switch asks to enter the enable command \ the command is entered, it gets rejected. Which
+access the switch the RADIUS server returns shell:privlvl=15�� and the switch asks to enter the enable command \ the command is entered, it gets rejected. Which
 command set is used to troubleshoot and reserve this issue?","A. line con 0
 aaa authorization console
 authorization exec
@@ -2354,7 +2354,7 @@ C. by MP-BGP
 D. by RT",A,,152,296
 QUESTION 297,"QUESTION 297
 An engineer is implementing a coordinated change with a server team. As part of the change, the engineer must configure interlace GigabitEthernet2 in an existing
-VRF “RED” then move the interface to an existing VRF “BLUE” when the server team is ready. The engineer configured interface GigabitEthemet2 in VRF “RED”
+VRF ��RED�� then move the interface to an existing VRF ��BLUE�� when the server team is ready. The engineer configured interface GigabitEthemet2 in VRF ��RED��
 
 Which configuration completes the change?","A. nterface GigabitEthernet2
 no ip address
@@ -2455,12 +2455,12 @@ Refer to the exhibit.
 An OSPF neighbor relationship between R2 and R3 is showing stuck in EXCHANGE/EXSTART state. The neighbor is established between R1 and R2. The network
 engineer can ping from R2 to R3 and vice versa, but the neighbor is still down. Which action resolves the issue?","A. Restore the Layer 2/Layer 3 conectivity issue in the ISP network.
 B. Match MTU on both router interfaces or ignore MTU.
-C. Administrative “shut then no shut” both router interfaces.
+C. Administrative ��shut then no shut�� both router interfaces.
 D. Enable OSPF on the interface, which is required.",B,p154_img0.png,154,300
 QUESTION 301,"QUESTION 301
 Refer to the exhibit
 
-R1 and R2 have been conﬁgured with the following settings for forming neighbor relationship with M05:
+R1 and R2 have been con?gured with the following settings for forming neighbor relationship with M05:
 R1
 router bgp 100
 neighbor 172.16.1.2 remote-as 200
@@ -2495,12 +2495,12 @@ The diagram shows R1 is having router ID 10.255.255.1.
 It also includes a message similar to the following at the bottom
 %OSPF-4-FLOOD_WAR: ..... type-5 adv-rtr 10.255.255.1 ....
 **************
-After conﬁguring OSPF in R1, some externa! destinations in the network became unreachable. Which action resolves the issue?","A. Change the R1 router ID from 10.255.255.1 to a unique value and clear the process.
+After con?guring OSPF in R1, some externa! destinations in the network became unreachable. Which action resolves the issue?","A. Change the R1 router ID from 10.255.255.1 to a unique value and clear the process.
 B. Increase the SPF delay interval on R1 to synchronize routes.
 C. Disconnect the router with the OSPF router ID 0.0.0.0 from the network.
-D. Clear the OSPF process on R1 to ﬂush stale LSAs sent by other routers.",A,,155,302
+D. Clear the OSPF process on R1 to ?ush stale LSAs sent by other routers.",A,,155,302
 QUESTION 303,"QUESTION 303
-Which two soiutions are used to overcome a ﬂapping link that causes a frequent label binding exchange between MPLS routers? (Choose two)","A. create targeted hellos to protect the session
+Which two soiutions are used to overcome a ?apping link that causes a frequent label binding exchange between MPLS routers? (Choose two)","A. create targeted hellos to protect the session
 B. increase a hold-timer to protect the session
 C. increase input queue on links to protect the session
 D. create link dampenirg on links to protect the session
@@ -2512,15 +2512,15 @@ Refer to the exibit.
 missing
 A command ""aaa authentication login default local"" is entered
 ****
-A network engineer must conﬁgure a login authentication method at line console 0 on Cisco ISR router. During conﬁguration the engineer got a call and router console
+A network engineer must con?gure a login authentication method at line console 0 on Cisco ISR router. During con?guration the engineer got a call and router console
 timed out. When the call was completed, the engineer pressed ""enter"" on the console. The engineer was asked for a username to log in to the router even through no
 username and password were configured previously on the router. What action resolves the issue?","A. Telnet to the router to login in
 B. Power cycle to reload the router and reconfigure it
 C. Configure the user and password in the RADIUS server
 D. Use CTRL+C to bypass authentication in the router.",B,,156,304
 QUESTION 305,"QUESTION 305
-An engineer creates a default static route on a router with a next hop of 10.1.1.1. On inspection, the engineer ﬁnds the router has two VRFs, Red and Blue. The next
-hop is valid for both VRFs and exists in each assigned VRF. Which conﬁguration achieves connectivity?","A. ip route vrf Red 0.0.0.0 255.255.255.255 10.1.1.1
+An engineer creates a default static route on a router with a next hop of 10.1.1.1. On inspection, the engineer ?nds the router has two VRFs, Red and Blue. The next
+hop is valid for both VRFs and exists in each assigned VRF. Which con?guration achieves connectivity?","A. ip route vrf Red 0.0.0.0 255.255.255.255 10.1.1.1
 ip route vrf Blue 0.0.0.0 255.255.255.255 10.1.1.1
 B. ip route 0.0.0.0 0.0.0.0 10.1.1.1
 C. ip route vrf Red 0.0.0.0 0.0.0.0 10.1.1.1
@@ -2528,14 +2528,14 @@ ip route vrf Blue 0.0.0.0 0.0.0.0 10.1.1.1
 D. ip route vrf Blue 0.0.0.0 255.255.255.255 10.1.1.1
 ip route vrf Red 0.0.0.0 255.255.255.255 10.1.1.1",C,,156,305
 QUESTION 306,"QUESTION 306
-What are two characteristics of IPv6 Source Guard? (Choose two)","A. requires the user to conﬁgure a static binding
+What are two characteristics of IPv6 Source Guard? (Choose two)","A. requires the user to con?gure a static binding
 B. recovers missing binding table entries
 C. used in service provider deployments to protect DDoS attacks
-D. requires that validate preﬁx be enabled
+D. requires that validate pre?x be enabled
 E. requires IPv6 snooping on Layer 2 access or trunk ports",CE,,156,306
 QUESTION 307,"QUESTION 307
 An engineer is creating a policy that overrides normal routing behavior. If the route to a destination of 10.100.100.0/24 is withdrawn from the routing table, the policy
-must direct trafﬁc to a next-hop of 10.1.1.1. If the route is present in the routing table, then normal forwarding must occur. Which conﬁguration meets the
+must direct traf?c to a next-hop of 10.1.1.1. If the route is present in the routing table, then normal forwarding must occur. Which con?guration meets the
 requirements?
 
 set ip next-hop recursive 10.1.1.1
@@ -2569,7 +2569,7 @@ A digrram showing R1 with 3 paths to 5.5.5.0/24
 EIGRP is used as the routing protocol.
 Only two EIGRP route for 5.5.5.5.0/24 is entered into the routing table.
 *******
-An engineer investigates a routing issue on R1 and ﬁnds that trafﬁc destined to 5.5.5.0/24 does not take all of the paths. Which action resolves the issue?","A. Decrease the variance value in EIGRP.
+An engineer investigates a routing issue on R1 and ?nds that traf?c destined to 5.5.5.0/24 does not take all of the paths. Which action resolves the issue?","A. Decrease the variance value in EIGRP.
 B. Stop advertising 192.168.13.0/24 in EIGRP.
 C. Remove the adjacency of R3 from EIGRP.
 D. Increase the variance value in EIGRP.",D,,157,308
@@ -2754,7 +2754,7 @@ B. Advertise the Loopback0 interface from R2 across the tunnel
 C. Stop sending a route matching the tunnel destination across the tunnel
 D. Readdress the IP network on the Tunnel0 on both routers using the /31 netmask",C,p166_img0.png,165,327
 QUESTION 328,"QUESTION 328
-Refer to the exhibit Mutual redistribution is enabled between RIP and EIGRP on R2 and R5. Which conﬁguration resolves the routing loop for the 192.168.1 .0/24 network?","A. R2:
+Refer to the exhibit Mutual redistribution is enabled between RIP and EIGRP on R2 and R5. Which con?guration resolves the routing loop for the 192.168.1 .0/24 network?","A. R2:
 router eigrp 10
 network 181.16.0.0
 redistribute rip metric 1 1 1 1 1
@@ -2880,20 +2880,20 @@ C    172.16.224.0/19 is directly connected, Loopback3
 C    172.16.192.0/19 is directly connected, Loopback4
 D    172.16.0.0/16 is a summary, 00:01:23, Null0
 
-Refer to the above routnig entries in R2. An engineer must conﬁgure EIGRP between R1 and R2 with no summary route. Which conﬁguration resolves the issue?","A. R1(conﬁg)#router eigrp 1
-R1(conﬁg-router)#no auto-summary
-B. R2(conﬁg)#router eigrp 1
-R2(conﬁg-router)#no auto-summary
-C. R1(conﬁg)#router eigrp 1
-R1(conﬁg-router)#auto-summary
-D. R2(conﬁg)#router eigrp 1
-R2(conﬁg-router)#auto-summary",B,,168,330
+Refer to the above routnig entries in R2. An engineer must con?gure EIGRP between R1 and R2 with no summary route. Which con?guration resolves the issue?","A. R1(con?g)#router eigrp 1
+R1(con?g-router)#no auto-summary
+B. R2(con?g)#router eigrp 1
+R2(con?g-router)#no auto-summary
+C. R1(con?g)#router eigrp 1
+R1(con?g-router)#auto-summary
+D. R2(con?g)#router eigrp 1
+R2(con?g-router)#auto-summary",B,,168,330
 QUESTION 331,"QUESTION 331
 
-Refer to the exhibit. R1 and R2 are conﬁgured for EIGRP peering using authentication and the neighbors failed to come up. Which action resolves the issue?","A. Conﬁgure a matching authentication type on both routers.
-B. Conﬁgure a matching key-chain name on both routers.
-C. Conﬁgure a matching key-id number on both routers.
-D. Conﬁgure a matching lowest key-id on both routers.",D,"p169_img0.png,p169_img1.png",168,331
+Refer to the exhibit. R1 and R2 are con?gured for EIGRP peering using authentication and the neighbors failed to come up. Which action resolves the issue?","A. Con?gure a matching authentication type on both routers.
+B. Con?gure a matching key-chain name on both routers.
+C. Con?gure a matching key-id number on both routers.
+D. Con?gure a matching lowest key-id on both routers.",D,"p169_img0.png,p169_img1.png",168,331
 QUESTION 332,"QUESTION 332
 Which method provides failure detection in BFD?","A. short duration, low overhead
 B. long duration. low overhead
@@ -2901,18 +2901,18 @@ C. long duration, high overhead
 D. short duration, high overhead",A,,169,332
 QUESTION 333,"QUESTION 333
 
-Refer to the exhibit. TCP trafﬁc should be reaching host 10.10.10.10/24 via R2 (left of the diagram). Which action resolves the issue?","A. TCP trafﬁc will reach the destination via R2 without any changes.
-B. Set IP next.hop to 10.10.12.2 under the route-map permit 10 to allow TCP trafﬁc.
+Refer to the exhibit. TCP traf?c should be reaching host 10.10.10.10/24 via R2 (left of the diagram). Which action resolves the issue?","A. TCP traf?c will reach the destination via R2 without any changes.
+B. Set IP next.hop to 10.10.12.2 under the route-map permit 10 to allow TCP traf?c.
 C. Allow TCP in the access list with no changes to the route map.
-D. Add a permit 20 statement in the route map to allow TCP trafﬁc.",C,p170_img0.png,169,333
+D. Add a permit 20 statement in the route map to allow TCP traf?c.",C,p170_img0.png,169,333
 QUESTION 334,"QUESTION 334
 
-Refer to the exhibit A loop occurs between R1, R2. and R3 while EIGRP is run with poison reverse enabled. Which action prevents the loop between R1 , R2, and R3?","A. Conﬁgure route ﬁltering
-B. Conﬁgure route tagging
-C. Conﬁgure R3 as stub receive-only.
+Refer to the exhibit A loop occurs between R1, R2. and R3 while EIGRP is run with poison reverse enabled. Which action prevents the loop between R1 , R2, and R3?","A. Con?gure route ?ltering
+B. Con?gure route tagging
+C. Con?gure R3 as stub receive-only.
 D. Enable split horizon",A,p170_img1.png,170,334
 QUESTION 335,"QUESTION 335
-A network administrator added a new spoke site with dynamic IP on the DMVPN network Which conﬁguration command passes trafﬁc on the DMVPN tunnel from the
+A network administrator added a new spoke site with dynamic IP on the DMVPN network Which con?guration command passes traf?c on the DMVPN tunnel from the
 spoke router?","A. ip nhrp registration no-unique
 B. ip nhrp registration no-registration
 C. ip nhrp registration ignore
@@ -2920,16 +2920,16 @@ D. ip nhrp registration dynamic",A,,170,335
 QUESTION 336,"QUESTION 336
 
 Refer to the exhibit R4 is experiencing packet drop when trying to reach 172.16.2.7 behind R2. Which action resolves the issue?","A. Enable auto summarization on all three routers R1 , R2. and R3.
-B. Insert a /16 ﬂoating static route on R2 toward R3 with metric 254.
+B. Insert a /16 ?oating static route on R2 toward R3 with metric 254.
 C. Disable auto summarization on R2
-D. Insert a /24 ﬂoating static route on R2 toward R3 with metric 254.",D,p171_img0.png,171,336
+D. Insert a /24 ?oating static route on R2 toward R3 with metric 254.",D,p171_img0.png,171,336
 QUESTION 337,"QUESTION 337
 
-Refer to the exhibit Reachability between servers in a network deployed with DHCPv6 is unstable. Which command must be removed from the conﬁguration to make
+Refer to the exhibit Reachability between servers in a network deployed with DHCPv6 is unstable. Which command must be removed from the con?guration to make
 DHCPv6 function?","A. ipv6 address 2001:0:1:4::1/64
 B. ipv6 dhcp server DHCPPOOL
 C. ipv6 nd ra suppress
-D. address prefix 2001:0:1:4::1/64 lifetime inﬁnite inﬁnite",C,p171_img1.png,171,337
+D. address prefix 2001:0:1:4::1/64 lifetime in?nite in?nite",C,p171_img1.png,171,337
 QUESTION 338,"QUESTION 338
 An engineer failed to run diagnostic commands on devices using Cisco DNA Center. Which action in Cisco DNA Center resolve the issue?","A. Enable APls
 B. Enable Secure Shell
@@ -2937,8 +2937,8 @@ C. Enable CDP.
 D. Enable Command Runner.",D,,171,338
 QUESTION 339,"QUESTION 339
 
-Refer to the exhibit. An engineer is trying to add an encrypted user password that should not be visible in the router conﬁguration. Which two
-conﬁguration commands resolve the issue? (Choose two.)","A. username Admin password 5 Cisco@123
+Refer to the exhibit. An engineer is trying to add an encrypted user password that should not be visible in the router con?guration. Which two
+con?guration commands resolve the issue? (Choose two.)","A. username Admin password 5 Cisco@123
 B. username Admin password Cisco@123
 C. password encryption aes
 D. username Admin secret Cisco@123
@@ -2952,12 +2952,12 @@ C. Increase the cost to 61 between R2 and R3
 D. Decrease the cost to 41 between R2 and R1.",C,p172_img1.png,172,340
 QUESTION 341,"QUESTION 341
 
-Refer to the exhibit. A network engineer applied a ﬁlter for LSA trafﬁc on OSPFv3 interarea routes on the area 5 ABR to protect advertising the internal routes of area 5
-to the business partner network. All other areas should receive the area 5 internal routes, After the respective route ﬁltering conﬁguration is applied on the ABR. area 5
-routes are not visible on any of the areas. How must the ﬁlter list be applied on the ABR to resolve this issue?","A. in the ""out"" direction for area 20 on router R2
-B. in the ”out"" direction for area 5 on router R1
-C. in the ”in” direction for area 20 on router R2
-D. in the ”in"" direction for area 5 on router R1",C,"p173_img0.png,p173_img1.png",172,341
+Refer to the exhibit. A network engineer applied a ?lter for LSA traf?c on OSPFv3 interarea routes on the area 5 ABR to protect advertising the internal routes of area 5
+to the business partner network. All other areas should receive the area 5 internal routes, After the respective route ?ltering con?guration is applied on the ABR. area 5
+routes are not visible on any of the areas. How must the ?lter list be applied on the ABR to resolve this issue?","A. in the ""out"" direction for area 20 on router R2
+B. in the ��out"" direction for area 5 on router R1
+C. in the ��in�� direction for area 20 on router R2
+D. in the ��in"" direction for area 5 on router R1",C,"p173_img0.png,p173_img1.png",172,341
 QUESTION 342,"QUESTION 342
 ip sla 10
   icmp-echo 10.1.1.10
@@ -2968,26 +2968,26 @@ ip sla schedule 10 life forever start-time now
 !
 track 1 ip sla 10 reachability
 
-Refer to the exhibit. An engineer conﬁgured lP SLA to monitor a next hop on a router for reachability. When the next hop is unreachable, the router is executing
-tracking and failing over another route, but packet loss is experienced because the reachability is ﬂapping. Which action resolves the
+Refer to the exhibit. An engineer con?gured lP SLA to monitor a next hop on a router for reachability. When the next hop is unreachable, the router is executing
+tracking and failing over another route, but packet loss is experienced because the reachability is ?apping. Which action resolves the
 issue?","A. Increase the frequency of the sla probe to 60.
 B. Increase the timeout of the sla probe to 6000.
 C. Append delay up 0 down 0 to the track command.
 D. Append delay up 60 down 60 to the track command.",D,,173,342
 QUESTION 343,"QUESTION 343
 
-Refer to the exhibit. The R2 loopback interface is advertised with RIP and EIGRP using default values. Which conﬁguration changes make R1 reach the R2 loopback
-using RIP?","A. R1(conﬁg)#router rigrp 1
-R1(conﬁg-router)#distance eigrp 120 120
-B. R1(conﬁg)#router rip
-R1(conﬁg-router)#distance 100
-C. R1(conﬁg)#router oigrp 1
-R1(conﬁg-router)#distance eigrp 130 120
-D. R1(conﬁg)#router rip
-R1(conﬁg-route)#distrance 90",C,p174_img0.png,173,343
+Refer to the exhibit. The R2 loopback interface is advertised with RIP and EIGRP using default values. Which con?guration changes make R1 reach the R2 loopback
+using RIP?","A. R1(con?g)#router rigrp 1
+R1(con?g-router)#distance eigrp 120 120
+B. R1(con?g)#router rip
+R1(con?g-router)#distance 100
+C. R1(con?g)#router oigrp 1
+R1(con?g-router)#distance eigrp 130 120
+D. R1(con?g)#router rip
+R1(con?g-route)#distrance 90",C,p174_img0.png,173,343
 QUESTION 344,"QUESTION 344
 
-Refer to the exhibit. An engineer must advertise routes into IPv6 MP-BGP and failed. Which conﬁguration resolves the issue on R1?","A. router bgp 64900
+Refer to the exhibit. An engineer must advertise routes into IPv6 MP-BGP and failed. Which con?guration resolves the issue on R1?","A. router bgp 64900
  no bgp default ipv4-unicast
 address-family ipv6 unicast
  redistribute ospf
@@ -3006,8 +3006,8 @@ address-family ipv6 multicast
   neighbor 2001:DB8:7000::2 translate-update ipv6 multicast",C,p174_img1.png,174,344
 QUESTION 345,"QUESTION 345
 
-Refer to the exhibit. A network administrator must conﬁgure DMVPN tunnels between the hub and spoke with dynamic spoke-to-spoke tunnel capabilities using
-EIGRP. Which tunnel interface command must the network administrator conﬁgure to establish an EIGRP peer?","A. no ip next-hop-self eigrp 1
+Refer to the exhibit. A network administrator must con?gure DMVPN tunnels between the hub and spoke with dynamic spoke-to-spoke tunnel capabilities using
+EIGRP. Which tunnel interface command must the network administrator con?gure to establish an EIGRP peer?","A. no ip next-hop-self eigrp 1
 B. no ip nhrp next-hop-solf
 C. ip nhrp next-hop-self
 D. ip next-hop-self eigrp 1",A,p175_img0.png,174,345
@@ -3025,19 +3025,19 @@ access-list 120 permit eigrp any
 access-list 120 permit eigrp any host 224.0.0.10
 access-list 120 permit udp any any eq pim-auto-rp
 
-Refer to the exhibit. The control plane is heavily impacted after the above CoPP conﬁguration is applied to the router. Which command removal lessens the impact on
+Refer to the exhibit. The control plane is heavily impacted after the above CoPP con?guration is applied to the router. Which command removal lessens the impact on
 the control plane?","A. access-list 120 permit udp any any eq pim-auto-rp
 B. access-list 120 permit tcp any gt 1024 eq bgp log
 C. access-list 120 permit ospf any
 D. access-list 120 permit eigrp any host 224.0.0.10",D,,175,346
 QUESTION 347,"QUESTION 347
-Which two components are required for MPLS Layer 3 VPN conﬁguration? (Choose two.)","A. Use a unique RD per customer VRF
+Which two components are required for MPLS Layer 3 VPN con?guration? (Choose two.)","A. Use a unique RD per customer VRF
 B. Use OSPF between PE and CE
 C. Use MP-BGP for customer routes
 D. Use pseudowire for Layer 2 routes
 E. Use LDP for customer routes",AC,,175,347
 QUESTION 348,"QUESTION 348
-A customer reports that traffic is not passing on an EIGRP enabled multipoint interface on a router conﬁgured as below:
+A customer reports that traffic is not passing on an EIGRP enabled multipoint interface on a router con?gured as below:
 
 interface Serial0/0/0
   no ip address
@@ -3051,26 +3051,26 @@ D. Disable split horizon",D,,176,348
 QUESTION 349,"QUESTION 349
 
 Refer to the exhibit A network administrator notices these console messages from host 10.11.110.12 originatinated from interface E1/0. The administrator considers
-this an unauthorized attempt to access SNMP on R1 . Which action prevents the attempts to reach R1 E1/0?","A. Conﬁgure IOS control plane protection using ACL 90 on interface E1/0
+this an unauthorized attempt to access SNMP on R1 . Which action prevents the attempts to reach R1 E1/0?","A. Con?gure IOS control plane protection using ACL 90 on interface E1/0
 B. Add a permit statement including the host 10.11.110.12 into ACL 90
-C. Conﬁgure IOS management plane protection using ACL 90 on interface E1/0.
+C. Con?gure IOS management plane protection using ACL 90 on interface E1/0.
 D. Create an inbound ACL on interface E1/0 to deny SNMP from host 10.11.110.12",D,p176_img0.png,176,349
 QUESTION 350,"QUESTION 350
 
-Refer to the exhibit. During ISP router maintenance, the network produced many alerts because of the ﬂapping interface. Which conﬁguration on R1 resolves the
+Refer to the exhibit. During ISP router maintenance, the network produced many alerts because of the ?apping interface. Which con?guration on R1 resolves the
 issue?","A. sump trap ip verify drop-rate
 B. ip verify drop-rate notify hold-down 60
 C. no snmp trap link-status
 D. snmp trap link-status down",C,p176_img1.png,176,350
 QUESTION 351,"QUESTION 351
 
-Refer to the exhibit. The administrator is trying to overwrite an existing ﬁle on the TFTP server that was previously uploaded by another router. However, the attempt to
-update the ﬁle fails. Which action resolves this issue?","A. Make the package.conf ﬁle executable by all on the TFTP server.
+Refer to the exhibit. The administrator is trying to overwrite an existing ?le on the TFTP server that was previously uploaded by another router. However, the attempt to
+update the ?le fails. Which action resolves this issue?","A. Make the package.conf ?le executable by all on the TFTP server.
 B. Make sure to run the TFTP service on the TFTP server.
 C. Make the TFTP folder writable by all on the TFTP server.
-D. Make the package.conf ﬁle writable by all on the TFTP server.",D,p177_img0.png,176,351
+D. Make the package.conf ?le writable by all on the TFTP server.",D,p177_img0.png,176,351
 QUESTION 352,"QUESTION 352
-A newiy installed spoke router is conﬁgured for DMVPN with the ip mtu 1400 command. Which conﬁguration allows the spoke to use fragmentation with the maximum
+A newiy installed spoke router is con?gured for DMVPN with the ip mtu 1400 command. Which con?guration allows the spoke to use fragmentation with the maximum
 negotiated TCP MTU over GRE?","A. ip tcp payload-mtu 1360
 crypto ipsec fragmentation after-encryption
 B. ip tcp adjust-mtu 1360
@@ -3081,7 +3081,7 @@ D. ip tcp adjust-mtu 1360
 crypto ipsec fragmentation after-encryption",D,,177,352
 QUESTION 353,"QUESTION 353
 
-Refer to the exhibit. Which conﬁguration allows Router‘l to reach 2005:DEAD:BEEF:DB2::/64?
+Refer to the exhibit. Which con?guration allows Router��l to reach 2005:DEAD:BEEF:DB2::/64?
 route-map Router1V6 permit 10
  set ipv6 next-hop 2006:DEAD:BEEF:DB1::1
  exit
@@ -3129,7 +3129,7 @@ QUESTION 354,"QUESTION 354
 What are the two goals of micro BFD sessions? (Choose two)","A. Each member link of a link aggregation group must run BFD
 B. Any member link on a link aggregation group must run BFD
 C. The high bandwidth member link of a link aggregration group must run BFD
-D. Continuity for each rnember link of a link aggregation group must be veriﬁed
+D. Continuity for each rnember link of a link aggregation group must be veri?ed
 E. Run the BFD session with 3x3 ms hello timer.",AD,,178,354
 QUESTION 355,"QUESTION 355
 What action is performed for untagged outgoing labels in an MPLS router?","A. Convert the incoming MPLS packet to an untagged packet and then do a FIB lookup.
@@ -3143,31 +3143,31 @@ C. hop-by-hop tunnel
 D. secured bidirectional tunnel",C,,179,356
 QUESTION 357,"QUESTION 357
 
-Refer to the exhibit. Routers R1. R2, R3, and R4 use EIGRP. However, trafﬁc always prefers R1 to R5 backup links in nonfailure scenarios. Which conﬁguration
-resolves the issue?","A. R1(conﬁg)#int gigabitEthernet 0/0/0
-R1(conﬁg-if)#bandvvidth 10000000
-B. R1(conﬁg)#no ip route 10.40.10.0 255.255.255.252 10.10.20.2
-R1(conﬁg)#ip route 10.40.10.0 255.255.255.252 10.10.20.2 115
-C. R1(conﬁg)#no ip route 10.40.10.0 255.255.255.252 10.10.20.2
-R1(conﬁg)#ip route 0.0.0.0 0.0.0.0 10.10.10.2
-D. R1(conﬁg)#int gigabitEthernet 0/0/0
-R1(conﬁg-if)#bandvvidth 10000",B,p179_img0.png,179,357
+Refer to the exhibit. Routers R1. R2, R3, and R4 use EIGRP. However, traf?c always prefers R1 to R5 backup links in nonfailure scenarios. Which con?guration
+resolves the issue?","A. R1(con?g)#int gigabitEthernet 0/0/0
+R1(con?g-if)#bandvvidth 10000000
+B. R1(con?g)#no ip route 10.40.10.0 255.255.255.252 10.10.20.2
+R1(con?g)#ip route 10.40.10.0 255.255.255.252 10.10.20.2 115
+C. R1(con?g)#no ip route 10.40.10.0 255.255.255.252 10.10.20.2
+R1(con?g)#ip route 0.0.0.0 0.0.0.0 10.10.10.2
+D. R1(con?g)#int gigabitEthernet 0/0/0
+R1(con?g-if)#bandvvidth 10000",B,p179_img0.png,179,357
 QUESTION 358,"QUESTION 358
 
 Refer to the exhibit. An engineer cannot determine the time of the problem on R1 due to a mismatch between the router local clock and logs. Which oornmand
-synchromzes the time between new log entries and the local dock on R1?","A. service timestamps log dateﬂme msec show-timezone
-B. service timestamps debug dateﬂme localtime msec
-C. service timestamps debug dateﬂme msec show-timezone
-D. service timestamps log dateﬂme localtime msec",B,p180_img0.png,180,358
+synchromzes the time between new log entries and the local dock on R1?","A. service timestamps log date?me msec show-timezone
+B. service timestamps debug date?me localtime msec
+C. service timestamps debug date?me msec show-timezone
+D. service timestamps log date?me localtime msec",B,p180_img0.png,180,358
 QUESTION 359,"QUESTION 359
 
 Refer to the exhibit. Which action installs routes into the routing table of R1 and R3?","A. BGP Synchronization has been enabled. Disable synchronization.
-B. BGP weight is set to 0. Conﬁgure a higher weight for these routes.
+B. BGP weight is set to 0. Con?gure a higher weight for these routes.
 C. IGP does not have a route to R4. Rectify route reachability.
 D. BGP has not been redistributed into the IGP. Redistribute BGP.",C,p180_img1.png,180,359
 QUESTION 360,"QUESTION 360
 
-Refer to the exhibit. Router R2 should be learning the route for 10.123.187.0/24 via EIGRP. Which action resolves the issue without introducing more issues?","A. Use distribute-list to ﬁlter the external routes in OSPF.
+Refer to the exhibit. Router R2 should be learning the route for 10.123.187.0/24 via EIGRP. Which action resolves the issue without introducing more issues?","A. Use distribute-list to ?lter the external routes in OSPF.
 B. Redistribute the route in EIGRP with metric, delay, and reliability.
 C. Remove route redistribution in R2 for this route in OSPF.
 D. Use distribute-list to modifv the route as an internal EIGRP route.",A,"p181_img0.png,p181_img1.png",180,360
@@ -3175,12 +3175,12 @@ QUESTION 361,"QUESTION 361
 While examining log messages from a router. an administrator sees this error message:
 %DUAL-5-NBRCHANGE: IP-EIGRP(0) 1: Neighbor 10.4.1.5 (Ethernet1/0) is down:  K-value mismatch
 
-Both routes are using default values. Which action resolves this issue?","A. Conﬁgure metric weights between the peers to calculate the valid K-value.
+Both routes are using default values. Which action resolves this issue?","A. Con?gure metric weights between the peers to calculate the valid K-value.
 B. Resolve metric differences between the peers to calculate the valid K-value.
 C. Upgrade the peer device IOS to support the goodbye message that establishes adjacency
 D. Match authentication parameters to support the goodbye message that establishes adjacency.",C,,181,361
 QUESTION 362,"QUESTION 362
-Which IPv6 security feature blocks all trafﬁc from an IPv6 host when initially connecting to a switch port except for trafﬁc to gain an IPv6 address and source IPv6
+Which IPv6 security feature blocks all traf?c from an IPv6 host when initially connecting to a switch port except for traf?c to gain an IPv6 address and source IPv6
 neighbors?","A. IPv6 RA Guard
 B. IPv6 Source Guard
 C. IPv6 Destination Guard
@@ -3211,13 +3211,13 @@ router ospf 1
 !
 access-list 1 permit 132.108.4.0 0.0.0.255
 
-Refer to the exhibit. The R1 OSPF neighbor is not receiving type 5 external LSAs for 132.108.2.0/24 and 132.108.3.0/24 networks. Which conﬁguration command
+Refer to the exhibit. The R1 OSPF neighbor is not receiving type 5 external LSAs for 132.108.2.0/24 and 132.108.3.0/24 networks. Which con?guration command
 resolves the issue?","A. access-list 1 permit 132.108.0.0 0.0.3.255
 B. access-list 1 permit 132.108.0.0 0.0.1.255
 C. access-list 1 permit 132.108.4.0 0.0.3.255
 D. access-list 1 permit 132.108.2.0 0.0.0.255",A,,182,364
 QUESTION 365,"QUESTION 365
-Which two funcﬁons are the functions of LDP? (Choose two.)","A. uses TCP for targeted LDP session
+Which two func?ons are the functions of LDP? (Choose two.)","A. uses TCP for targeted LDP session
 B. uses P2P VPWS services
 C. uses pseudowire signaling
 D. uses MP2MP VPLS services
@@ -3250,14 +3250,14 @@ R2(config-if)#ip tcp adjust-mss 1360
 R2(config-if)#tunnel source 10.10.2.2
 R2(config-if)#tunnel destination 10.10.1.1",B,,182,366
 QUESTION 367,"QUESTION 367
-ln a DMVPN network, the Spoke1 user observed that the voice trafﬁc is coming to Spoke2 users via the hub router. Which command is required on both spoke routers
+ln a DMVPN network, the Spoke1 user observed that the voice traf?c is coming to Spoke2 users via the hub router. Which command is required on both spoke routers
 to communicate directly to one another?","A. ip nhrp shortcut
 B. ip nhrp redirect
 C. ip nhrp nhs multiast
 D. ip nhrp map dynamic",A,,183,367
 QUESTION 368,"QUESTION 368
 
-Refer to the exhibit. An engineer conﬁgured NetFlow on R1, but the flow do not reach the NMS server from R1. Which conﬁguration resolves this issue?","A. R1(config)#interface Ethernet0/1
+Refer to the exhibit. An engineer con?gured NetFlow on R1, but the flow do not reach the NMS server from R1. Which con?guration resolves this issue?","A. R1(config)#interface Ethernet0/1
 R1(config-if)#ip flow monitor FlowMonitor1 input
 R1(config-if)#ip flow monitor FlowMonitor1 output
 B. R1(config)#interface Ethernet0/0
@@ -3278,7 +3278,7 @@ B. to correct OSPF backdoor routing when OSPF is used as the PE-CE connection pr
 C. to allow inter-area routing when OSPF is used as the PE-CE connection protocol in a MPLS VPN network
 D. to allow intra-area routing when OSPF is used as the PE-CE connection protocol in an MPLS VPN network",B,,184,370
 QUESTION 371,"QUESTION 371
-The network administrator conﬁgured CoPP so that all routing protocol trafﬁc toward the router CPU is limited to 1 mbps. All trafﬁc that exceeds this limit must be
+The network administrator con?gured CoPP so that all routing protocol traf?c toward the router CPU is limited to 1 mbps. All traf?c that exceeds this limit must be
 dropped. The router is running BGP and OSPF. Management traffic for Telnet and SSH must be limited to 500 kbps.
 
 access-list 100 permit tcp any any eq 179
@@ -3298,7 +3298,7 @@ policy-map PM-COPP
 !
 control-plane
  service-policy output PM-COPP
-No trafﬁc is filtering through CoPP, which is resulting in high CPU utilization. Which conﬁguration resolves the issue?","A. no access-list 100
+No traf?c is filtering through CoPP, which is resulting in high CPU utilization. Which con?guration resolves the issue?","A. no access-list 100
 access-list 100 permit tcp any any eq 179
 access-list 100 permit ospf any any
 access-list 101 permit tcp any any range 22 23
@@ -3337,10 +3337,10 @@ D. debug condition interface
 E. debug condition session-id ADJCHG",AD,p185_img0.png,185,372
 QUESTION 373,"QUESTION 373
 An engineer noticed that the router log rnessages do not have any information about when the event occurred.  Which action should the engineer take when enabling
-service time stamps to improve the logging functionality at a granular level?","A. Conﬁgure the debug uptime option.
-B. Conﬁgure the msec option.
-C. Conﬁgure the timezone option
-D. Conﬁgure the log uptime option.",B,,185,373
+service time stamps to improve the logging functionality at a granular level?","A. Con?gure the debug uptime option.
+B. Con?gure the msec option.
+C. Con?gure the timezone option
+D. Con?gure the log uptime option.",B,,185,373
 QUESTION 374,"QUESTION 374
 interface GigabitEthernet2
  no ip address
@@ -3354,12 +3354,12 @@ interface GigabitEthernet2.10
  no shutdown
 
 Refer to the exhibit. With the partial configuration of a router-on-a-stick, clients in VLAN 10 on Gi2 cannot obtain IP configuration from the central DHCP server. The
-DHCP server is reachable by a successful ping from the router. Which action resolves the issue?","A. Conﬁgure a valid IP address on the Gi2 interface so that DHCP requests can be forwarded.
-B. Conﬁgure the ip dhcp pool 1 and network 192.168.210.0 255.255.255.0 commands.
-C. Conﬁgure the ip helper-address 192.168.255.3 command on the Gi2.10 subinterface.
-D. Conﬁgure the ip dhcp excluded-address 192.168.255.3 command on the Gi2.10 subinterface.",C,,185,374
+DHCP server is reachable by a successful ping from the router. Which action resolves the issue?","A. Con?gure a valid IP address on the Gi2 interface so that DHCP requests can be forwarded.
+B. Con?gure the ip dhcp pool 1 and network 192.168.210.0 255.255.255.0 commands.
+C. Con?gure the ip helper-address 192.168.255.3 command on the Gi2.10 subinterface.
+D. Con?gure the ip dhcp excluded-address 192.168.255.3 command on the Gi2.10 subinterface.",C,,185,374
 QUESTION 375,"QUESTION 375
-An engineer conﬁgured routing between multiple OSPF domains and introduced a routing loop that caused network instability. Which action resolves the problem?","A. Set a tag using the redistribtute command toward a domain and deny inbound in the other domain by a matching tag
+An engineer con?gured routing between multiple OSPF domains and introduced a routing loop that caused network instability. Which action resolves the problem?","A. Set a tag using the redistribtute command toward a domain and deny inbound in the other domain by a matching tag
 B. Set a tag using the redistribtute command toward a different domain and deny the matching tag when exiting from that domain
 C. Set a tag using the network command in a domain and use the route-map command to deny the matching tag when existing toward a different domain.
 D. Set a tag using the network command in a domain and use the route-map command to deny the matching tag when entering into a different domain.",A,p186_img0.png,186,375
@@ -3383,10 +3383,10 @@ ipv6 enable
 ospfv3 10 ipv4 area 10
 ospfv3 10 ipv6 area 0
 
-Refer to the exhibit. An administrator must conﬁgure the router with OSPF for IPv4 and IPv6 networks under a single process. The OSPF adjacencies are not
-established and did not meet the requirement. Which action resolves the issue?","A. Replace OSPFprocess 10 on the interfaces with OSPF process 1 for the IPv4 address, and remove process 10 from the global conﬁguration.
-B. Replace OSPFprocess 10 on the interfaces with OSPF process 1, and remove process 10 from the global conﬁguration.
-C. Replace OSPFprocess 10 on the interfaces with OSPF process 1 for the IPv6 address, and remove process 10 from the global conﬁguration.
+Refer to the exhibit. An administrator must con?gure the router with OSPF for IPv4 and IPv6 networks under a single process. The OSPF adjacencies are not
+established and did not meet the requirement. Which action resolves the issue?","A. Replace OSPFprocess 10 on the interfaces with OSPF process 1 for the IPv4 address, and remove process 10 from the global con?guration.
+B. Replace OSPFprocess 10 on the interfaces with OSPF process 1, and remove process 10 from the global con?guration.
+C. Replace OSPFprocess 10 on the interfaces with OSPF process 1 for the IPv6 address, and remove process 10 from the global con?guration.
 D. Replace OSPFprocess 10 on the interfaces with OSPF process 1, and configure an additional router ID with IPv6 address.",B,,186,376
 QUESTION 377,"QUESTION 377
 Which failure detection mechanisrn is used for BFD?","A. consistent rate
@@ -3395,13 +3395,13 @@ C. variable rate
 D. routing protocol failute",A,,187,377
 QUESTION 378,"QUESTION 378
 The IPv6 network is under attack by an unknown source that is neither in the binding table nor learned through neighbor discovery. Which feature helps prevent the
-attack?","A. IPv6 Preﬁx Guard
+attack?","A. IPv6 Pre?x Guard
 B. IPv6 Snooping
 C. IPv6 Router Advertisement Guard
 D. IPv6 Destination Guard",A,,187,378
 QUESTION 379,"QUESTION 379
 
-Refer to the exhibit. The network administrator conﬁgured BGP as the backup route for 10.0.0.0/8 and it should work only when EIGRP 10.0.0.0/8 failed to install for the site. Which conﬁguration resolves the issue?","A. configure terminal
+Refer to the exhibit. The network administrator con?gured BGP as the backup route for 10.0.0.0/8 and it should work only when EIGRP 10.0.0.0/8 failed to install for the site. Which con?guration resolves the issue?","A. configure terminal
 !
  ip route 10.0.0.0 255.0.0.0 192.168.90.2
 B. configure terminal
@@ -3425,10 +3425,10 @@ Switch(config-vrf)# exit
 
 Switch(config)# ip vrf 8O
 Switch(config-vrf)# rd 80:1
-Switch(config-vrf)# route—target export 80:1
+Switch(config-vrf)# route��target export 80:1
 Switch(config-vrf)# route-target import 80:1
 Refer to the exhibit. An engineer must extend VRF-Lite over a trunk to another switch for VLAN 70 (10.70.70.0/24) on port GigabitEthernet0/0 and VLAN 80
-(10.80.80.0/24) on port GigabitEthemet0/1. Which conﬁguration accomplishes this objective?","A. interface GigabitEthernet0/0
+(10.80.80.0/24) on port GigabitEthemet0/1. Which con?guration accomplishes this objective?","A. interface GigabitEthernet0/0
 no switchport
 ip vrf forwarding 70
 ip address 10.70.70.1 255.255.255.0
@@ -3463,10 +3463,10 @@ switchport trunk encapsulation dot1q
 switchport mode trunk
 switchport trunk allowed vlan 80",D,,188,380
 QUESTION 381,"QUESTION 381
-The network administrator must conﬁgure R1 to authenticate Telnet connections based on Cisco ISE using RADIUS. ISE has been conﬁgured with an IP address of
+The network administrator must con?gure R1 to authenticate Telnet connections based on Cisco ISE using RADIUS. ISE has been con?gured with an IP address of
 192.168.1.5 and with a network device pointing toward R1 (192.168.1.1) with a shared secret password of Cisco123.
 
-The administrator has conﬁgured this on R1:
+The administrator has con?gured this on R1:
 aaa new-model
 !
 radius server ISE1
@@ -3477,7 +3477,7 @@ aaa group server tacas+ RAD-SERV
  server name ISE1
 !
 aaa authentication login default group RAD-SERV
-The network administrator cannot authenticate to access R1 based on ISE. Which set of conﬁgurations ﬁxes the issue?","A. aaa group server radius RAD-SERV
+The network administrator cannot authenticate to access R1 based on ISE. Which set of con?gurations ?xes the issue?","A. aaa group server radius RAD-SERV
  server name ISE1
 B. aaa group server tacacs+ ISE1
  server name RAD-SERV
@@ -3487,13 +3487,13 @@ D. line vty 0 4
  login authentication default",A,,189,381
 QUESTION 382,"QUESTION 382
 Network operations report issues with receiving too many external routes, which caused CPU spike on routers with smaller rnemories. Which action resolves the
-issue?","A. Conﬁgure the area range command when redistributing on ASBR
-B. Conﬁgure the summary-address command when redistributing on ABR
-C. Conﬁgure the area range command when redistributing on ABR
-D. Conﬁgure the summary-address command when redistributing on ASBR",D,,189,382
+issue?","A. Con?gure the area range command when redistributing on ASBR
+B. Con?gure the summary-address command when redistributing on ABR
+C. Con?gure the area range command when redistributing on ABR
+D. Con?gure the summary-address command when redistributing on ASBR",D,,189,382
 QUESTION 383,"QUESTION 383
 
-Refer to the exhibit. An engineer must conﬁgure a LAN-to-LAN lPsec VPN between R1 and the remote router. Which lPsec Phase 1 configuration must the engineer use for the local router?","A. crypto isakmp policy 5
+Refer to the exhibit. An engineer must con?gure a LAN-to-LAN lPsec VPN between R1 and the remote router. Which lPsec Phase 1 configuration must the engineer use for the local router?","A. crypto isakmp policy 5
  authentication pre-share
  encryption 3des
  hash md5
@@ -3526,11 +3526,11 @@ QUESTION 384,"QUESTION 384
 Refer to the exhibit. A network engineer received a call from the vendor for a failed attempt to remotety log in to their managed router loopback interface from 192
 163.40.15. Which action must the network engineer take to resolve teh issue?","A. The source IP summarization must be updated to include the vendor source IP address.
 B. The IP access list VENDOR must be applied to interface Ioopback 100.
-C. The tirne-range conﬁguration must be changed to use absolute instead of periodic
-D. The EIGRP conﬁguration must be updated to include a network statement for loopback 100.",A,p191_img0.png,191,384
+C. The tirne-range con?guration must be changed to use absolute instead of periodic
+D. The EIGRP con?guration must be updated to include a network statement for loopback 100.",A,p191_img0.png,191,384
 QUESTION 385,"QUESTION 385
 
-Refer to the exhibit. An engineer is trying to connect to R1 via Telnet with no success. Which conﬁgutation resolves the issue?","A. tacacs server prod
+Refer to the exhibit. An engineer is trying to connect to R1 via Telnet with no success. Which con?gutation resolves the issue?","A. tacacs server prod
  address ipv4 10.221.10.11
  exit
 B. ip route 10.221.10.10 255.255.255.255 ethernet 0/1
@@ -3544,13 +3544,13 @@ Drag and drop the ICMPv6 neighbor discovery rnessages from the Ieft onto the cor
 Select and Place:",,A,"p192_img0.png,p192_img1.png",191,386
 QUESTION 387,"QUESTION 387
 
-Refer to the exhibit. An engineer conﬁgured SNMP Communities on UserSW2 switch, but the SNMP server cannot upload modiﬁed conﬁgurations to the switch.
-Which conﬁguration resolves this issue?","A. snmp-server community Ciscowruser RW 11
+Refer to the exhibit. An engineer con?gured SNMP Communities on UserSW2 switch, but the SNMP server cannot upload modi?ed con?gurations to the switch.
+Which con?guration resolves this issue?","A. snmp-server community Ciscowruser RW 11
 B. snmp-server group NETVIEW v2c priv read NETVIEW access 11
 C. snmp-server community Cisc0Us3r RW 11
 D. snmp-server group NETADMIN v3 priv read NETVIEW write NETADMIN access 22",A,p192_img2.png,192,387
 QUESTION 388,"QUESTION 388
-How is a preshared key ”Test"" for all the remote VPN routers conﬁgured in a DMVPN using GRE over IPsec set up?","A. authentication pre-share Test address 0.0.0.0 0.0.0.0
+How is a preshared key ��Test"" for all the remote VPN routers con?gured in a DMVPN using GRE over IPsec set up?","A. authentication pre-share Test address 0.0.0.0 0.0.0.0
 B. set pre-share Test address 0.0.0.0 0.0.0.0
 C. crypto ipsec key Test address 0.0.0.0 0.0.0.0
 D. crypto isakmp key Test address 0.0.0.0 0.0.0.0",D,,192,388
@@ -3572,30 +3572,30 @@ QUESTION 390,"QUESTION 390
 
 Refer to the exhibit. An administrator must harden a router, but the administrator failed to test the SSH access successfully to the router. Which action resolves the
 Issue?","A. SSH syntax must be ssh -l user ip to log in to the remote device
-B. Conﬁgure enable secret to log in to the device
-C. Conﬁgure SSH on the remote device to log in using SSH
+B. Con?gure enable secret to log in to the device
+C. Con?gure SSH on the remote device to log in using SSH
 D. SSH must be allowed with the transport output ssh command",A,p193_img1.png,193,390
 QUESTION 391,"QUESTION 391
-The network administrator configured the router for Control Plane Policing so that inbound SSH trafﬁc is policed to 500 kbps. This policy must apply to traffic coming infrom 10.10.10.0/24 and 192.168.10.0/24 networks.
+The network administrator configured the router for Control Plane Policing so that inbound SSH traf?c is policed to 500 kbps. This policy must apply to traffic coming infrom 10.10.10.0/24 and 192.168.10.0/24 networks.
 
 access-list 100 permit ip 10.10.10.0 0.0.0.255 any
-access—list 100 permit tcp 192.168.10.0 0.0.0.255 any eq 23
+access��list 100 permit tcp 192.168.10.0 0.0.0.255 any eq 23
 !
 class-map CLASS-SSH
  match access-group 100
 !
-policy-map PM—COPP
+policy-map PM��COPP
  class CLASS-SSH
   police 500000 conform-action transmit
 !
 interface E0/0
- service-policy input PM—COPP
+ service-policy input PM��COPP
 !
 interface E0/1
  service-policy input PM-COPP
-The Control Plane Policing is not applied to SSH trafﬁc and SSH is open to use any bandwidth availiable. Which configuration resolves this issue?","A. no access-list 100
+The Control Plane Policing is not applied to SSH traf?c and SSH is open to use any bandwidth availiable. Which configuration resolves this issue?","A. no access-list 100
 access-list 100 permit tcp 10.10.10.0 0.0.0.255 any eq 22
-access-ﬁst 100 permit tcp 192.168.10.0 0.0.0.255 any eq 22
+access-?st 100 permit tcp 192.168.10.0 0.0.0.255 any eq 22
 !
 policy-map PM-COPP
  class CLASS-SSH
@@ -3603,7 +3603,7 @@ policy-map PM-COPP
   police 500000 conform-action transmit exceed-action drop
 B. no access-list 100
 access-list 100 permit tcp 10.10.10.0 0.0.0.255 any eq 22
-access-ﬁst 100 permit tcp 192.168.10.0 0.0.0.255 any eq 22
+access-?st 100 permit tcp 192.168.10.0 0.0.0.255 any eq 22
 C. no access-list 100
 access-list 100 permit tcp 10.10.10.0 0.0.0.255 any eq 22
 access-list 100 permit tcp 192.168.10.0 0.0.0.255 any eq 22
@@ -3626,7 +3626,7 @@ control-plane
  service-policy input PM-COPP",C,,194,391
 QUESTION 392,"QUESTION 392
 
-Refer to the exhibit. An engineer conﬁgures two ASBRs, 10.4.17.6 and 10.4.15.5, in an OSPF network to redistribute routes from EIGRR. However, both ASBRs showthe EIGRP routes as equai costs even though the next-hop router 10.4.17.6 is closer to R1. How should the network trafﬁc to the EIGRP preﬁxes be sent via10.4.17.6?","A. The administrative distance shouid be raised to 120 from the ASBR 10.4.15.5.
+Refer to the exhibit. An engineer con?gures two ASBRs, 10.4.17.6 and 10.4.15.5, in an OSPF network to redistribute routes from EIGRR. However, both ASBRs showthe EIGRP routes as equai costs even though the next-hop router 10.4.17.6 is closer to R1. How should the network traf?c to the EIGRP pre?xes be sent via10.4.17.6?","A. The administrative distance shouid be raised to 120 from the ASBR 10.4.15.5.
 B. The ASBR 10.4.17.6 shouid assign a tag to match and assign a lower metric an R1
 C. The administrative distance should be raised to 120 from the ASBR 10.4.17.6.
 D. The redisdistributed prefixes should be advertised as Type 1.",D,p195_img0.png,194,392
@@ -3641,7 +3641,7 @@ router bgp 65500
  neighbor 192.168.111.1 remote-as 100
  neighbor 192.168.111.1 route-map SETLP out
  neighbor 192.168.112.2 remote-as 200
-This conﬁguration failed to send routes to AS 100 as the preferred path. Which set of conﬁgurations resolves the issue?
+This con?guration failed to send routes to AS 100 as the preferred path. Which set of con?gurations resolves the issue?
 ","A. route-map SETLP
  set local-preference 111
 !
@@ -3675,8 +3675,8 @@ C. R2(config-router)#area 21 virtual-link 192.168.125.5
 D. R2(config-router)#no area 21 stub",B,"p196_img0.png,p196_img1.png",196,394
 QUESTION 395,"QUESTION 395
 
-Refer to the exhibit. An engineer must conﬁgure OSPF with R9 and R10 and conﬁgure redistribution between OSPF and RIP, causing routing loop. Which
-conﬁguration on R9 and R10 meets this objective?","A. router ospf 1
+Refer to the exhibit. An engineer must con?gure OSPF with R9 and R10 and con?gure redistribution between OSPF and RIP, causing routing loop. Which
+con?guration on R9 and R10 meets this objective?","A. router ospf 1
  redistribute rip subnets tag 20
 !
 route-map deny_tag20 deny 10
@@ -3720,7 +3720,7 @@ C. Use the network statement on Rome to inject the 172.16.X.0/24 networks into E
 D. Change the administrative distance of RIP to 150.",C,"p197_img0.png,p198_img0.png",197,396
 QUESTION 397,"QUESTION 397
 
-Refer to the exhibit. Bangkok is using ECMP to reach 172.20.2.0/24 network The network administrator must conﬁgure it in such a way that trafﬁc from 172.16.2.0/24network uses the Singapore router as the preferred route. Which set of configurations accomplishes this task?","A. Bangkok
+Refer to the exhibit. Bangkok is using ECMP to reach 172.20.2.0/24 network The network administrator must con?gure it in such a way that traf?c from 172.16.2.0/24network uses the Singapore router as the preferred route. Which set of configurations accomplishes this task?","A. Bangkok
 access-list 101 permit ip 172.16.2.0 0.0.0.255 172.20.2.0 0.0.0.255
 !
 route-map PBR1 permit 10
@@ -3763,7 +3763,7 @@ Select and Place:",,A,"p199_img0.png,p199_img1.png",199,398
 QUESTION 399,"QUESTION 399
 
 Routing table in Cape Town
-Refer to the exhibit. The network administrator must conﬁgure Cape Town to reach Dubai via Tokyo based on the speeds provided by the service provider. lt was noticed that Cape Town is reaching Dubai direcﬂy and failed to meet the requirement. Which configuration fixes the issue?
+Refer to the exhibit. The network administrator must con?gure Cape Town to reach Dubai via Tokyo based on the speeds provided by the service provider. lt was noticed that Cape Town is reaching Dubai direc?y and failed to meet the requirement. Which configuration fixes the issue?
 ","A. Cape Town
 router eigrp 100
 variance 2
@@ -3792,7 +3792,7 @@ interface E0/1
 bandwidth 10000",B,"p200_img0.png,p200_img1.png",199,399
 QUESTION 400,"QUESTION 400
 
-Refer to the exhibit. An engineer conﬁgured NetFlow but cannot receive the ﬂows from R1 . Which two conﬁgurations resolve the issue? (Choose two).","A. R3(config)#ip access-list extended DDOS
+Refer to the exhibit. An engineer con?gured NetFlow but cannot receive the ?ows from R1 . Which two con?gurations resolve the issue? (Choose two).","A. R3(config)#ip access-list extended DDOS
 R3(config-ext-nacl)#5 permit udp any host 10.66 66.66 eq 1090
 B. R4(config)#ip access-list extended DDOS
 R4(config-ext-nacl)#5 permit udp any host 10.66 66.66 eq 1090
@@ -3838,12 +3838,12 @@ neighbor 192,168.2.2 remote-as 200
 neighbor 192168.2.2 route-map SETAS out",B,p201_img1.png,201,401
 QUESTION 402,"QUESTION 402
 A network administrator is troubleshooting a failed AAA login issue on a Cisco Catalyst c3560 switch. When the network administrator tries to log in through SSH
-using TACACS+ usemame and password credentials, the switch is no longer authenticating and is failing back to the local account. Which action resolves this issue?","A. Conﬁgure ip tacacs-server source-interface GigabitEthemet 1/1.
-B. Conﬁgure ip tacacs source-ip 192.168.100.55.
-C. Conﬁgure ip tacacs-server source-ip 192.168.100.55.
-D. Conﬁgure ip tacacs source-interface GigabitEthemet 1/1.",D,,202,402
+using TACACS+ usemame and password credentials, the switch is no longer authenticating and is failing back to the local account. Which action resolves this issue?","A. Con?gure ip tacacs-server source-interface GigabitEthemet 1/1.
+B. Con?gure ip tacacs source-ip 192.168.100.55.
+C. Con?gure ip tacacs-server source-ip 192.168.100.55.
+D. Con?gure ip tacacs source-interface GigabitEthemet 1/1.",D,,202,402
 QUESTION 403,"QUESTION 403
-A network engineer must conﬁgure a DMVPN network so that 3 spoke establishes a direct path to another spoke if the two must send trafﬁc to each other. A spoke must send trafﬁc directly to the hub if required. Which conﬁguration meets this requirement?","A. At the hub router:
+A network engineer must con?gure a DMVPN network so that 3 spoke establishes a direct path to another spoke if the two must send traf?c to each other. A spoke must send traf?c directly to the hub if required. Which con?guration meets this requirement?","A. At the hub router:
 interface tunnel10
 ip nhrp nhs multicast dynamic
 ip nhrp nhs shortcut
@@ -3885,7 +3885,7 @@ ip nhrp shortcut
 tunnel mode gre multicast",C,,202,403
 QUESTION 404,"QUESTION 404
 
-Refer to the exhibit. The network engineer conﬁgured the summarization of the RIP routes into the OSPF domain on R5 but still sees four different 172.16.0.0/24
+Refer to the exhibit. The network engineer con?gured the summarization of the RIP routes into the OSPF domain on R5 but still sees four different 172.16.0.0/24
 networks on R4. Which action resolves the issue?","A. R4(config)#router ospf 1
 R4(config-router)#no area
 R4(config-router)#summary-address 172.16.0.0 255.255.252.0
@@ -3900,21 +3900,21 @@ R5(config-router)#network 172.16.0.0 0.255.255.255 area 56
 R5(config-router)#summary-address 172.16.0.0 255.255.252.0",C,p203_img0.png,203,404
 QUESTION 405,"QUESTION 405
 
-Refer to the exhibit. An engineer conﬁgured route exchange between two different companies for a migration project. EIGRP routes were learned in router C, but no
-OSPF routes were learned in router A. Which conﬁguration allows router A to receive OSPF routes?","A. (conﬁg-router-af-topology)#redistribute connected
-B. (conﬁg-router-af-topology)#redistribute ospf 10 metric 1000000 10 255 1 1500
-C. (conﬁg-router-af-topology)#no redistribute ospf 10 match external 1 external 2 metric 1000000 10 255 1 1500
-D. (conﬁg-router-af-topology)#redistribute ospf 10 1000000 10 255 1 1500",B,p204_img0.png,203,405
+Refer to the exhibit. An engineer con?gured route exchange between two different companies for a migration project. EIGRP routes were learned in router C, but no
+OSPF routes were learned in router A. Which con?guration allows router A to receive OSPF routes?","A. (con?g-router-af-topology)#redistribute connected
+B. (con?g-router-af-topology)#redistribute ospf 10 metric 1000000 10 255 1 1500
+C. (con?g-router-af-topology)#no redistribute ospf 10 match external 1 external 2 metric 1000000 10 255 1 1500
+D. (con?g-router-af-topology)#redistribute ospf 10 1000000 10 255 1 1500",B,p204_img0.png,203,405
 QUESTION 406,"QUESTION 406
 
-Refer to the exhibit. The network administrator conﬁgures the Chicago router to mutually redistribute the LA and NewYork routes with EIGRP
+Refer to the exhibit. The network administrator con?gures the Chicago router to mutually redistribute the LA and NewYork routes with EIGRP
 routes to be summarized as a single route in OSPF:
 router eigrp 100
  redistribute ospf 1 metric 10 10 10 10 10
 router ospf 1
  redistribute eigrp 100 subnets
  area 0 range 192.168.4.0 255.255.252.0
-After the conﬁguration, the LA router receives all the speciﬁc NewYork routes except the summary route. Which set of conﬁgurations resolve the
+After the con?guration, the LA router receives all the speci?c NewYork routes except the summary route. Which set of con?gurations resolve the
 issue on the Chimgo router?","A. router ospf 1
  summary-address 192.168.4.0 255.255.252.0
 B. router ospf 1
@@ -3925,7 +3925,7 @@ D. interface E 0/0
  ip summary-address eigrp 100 192.168.4.0 255.255.252.0",A,p204_img1.png,204,406
 QUESTION 407,"QUESTION 407
 
-Refer to the exhibit. R1 cannot authenticate via TACACS. Which conﬁguration resolves the issue?","A. tacacs server DC1_TACACS
+Refer to the exhibit. R1 cannot authenticate via TACACS. Which con?guration resolves the issue?","A. tacacs server DC1_TACACS
  address ipv4 10.60.66.66
  key D@t@c3nter1TACACS
 B. aaa group server tacacs+ DC1_TACACS
@@ -3936,35 +3936,35 @@ C. tacacs server DC1_TACACS
 D. aaa group server tacacs+ DC_TACACS
  server name DC_TACACS",C,p205_img0.png,204,407
 QUESTION 408,"QUESTION 408
-What must be conﬁgured by the network engineer to circumvent AS_PATH loop prevention mechanism in IP/VPN Hub and Spoke deployment scenanos?","A. Use allowas-in and as-override at all PEs
+What must be con?gured by the network engineer to circumvent AS_PATH loop prevention mechanism in IP/VPN Hub and Spoke deployment scenanos?","A. Use allowas-in and as-override at all PEs
 B. Use allowas-in and as-override at the PE_Hub
 C. Use allowas at the PE_Hub
 D. Use as-override at the PE_Hub",B,,205,408
 QUESTION 409,"Refer to the exhibit. An administrator can log in to the device using Telnet, but the attempts to log in to the same device using SSH with the same credentials fail.
-Which action resolves this issue?","A. Conﬁgure transport input all on the VTY lines to allow SSH.
-B. Conﬁgure the VTY lines with login local.
-C. Conﬁgure to use the Telnet user database for SSH as well.
-D. Conﬁgure SSH service on the router.",B,"p205_img1.png,p206_img0.png",205,409
+Which action resolves this issue?","A. Con?gure transport input all on the VTY lines to allow SSH.
+B. Con?gure the VTY lines with login local.
+C. Con?gure to use the Telnet user database for SSH as well.
+D. Con?gure SSH service on the router.",B,"p205_img1.png,p206_img0.png",205,409
 QUESTION 410,"QUESTION 410
-An engineer must override the normal routing behavior of a router. The engineer must send HTTP trafﬁc that is destined to 10.100.100.100 from 10.1.1.0/24 via a next
-hop of 10.2.2.2, two hops away from the router that is connected to the 10.1.1.0/24 subnet. Which conﬁguration reroutes trafﬁc according to this requirement?","A. access—list 100 permit tcp 10.1.1.0 0.0.0.255 host 10.100.100.100 eq http
+An engineer must override the normal routing behavior of a router. The engineer must send HTTP traf?c that is destined to 10.100.100.100 from 10.1.1.0/24 via a next
+hop of 10.2.2.2, two hops away from the router that is connected to the 10.1.1.0/24 subnet. Which con?guration reroutes traf?c according to this requirement?","A. access��list 100 permit tcp 10.1.1.0 0.0.0.255 host 10.100.100.100 eq http
 !
 route-map POLICY permit 10
  match ip address 100
  set ip next-hop recursive 10.2.2.2
-B. access—list 100 permit tcp 10.1.1.0 0.0.0.255 host 10.100.100.100 eq http
+B. access��list 100 permit tcp 10.1.1.0 0.0.0.255 host 10.100.100.100 eq http
 !
 route-map POLICY permit 10
  match ip address 100
  set ip next-hop 10.2.2.2
 route-map POLICY permit 20
-C. access—list 100 permit tcp 10.1.1.0 0.0.0.255 host 10.100.100.100 eq http
+C. access��list 100 permit tcp 10.1.1.0 0.0.0.255 host 10.100.100.100 eq http
 !
 route-map POLICY permit 10
  match ip address 100
  set ip next-hop recursive 10.2.2.2
 route-map POLICY permit 20
-D. access—list 100 permit tcp 10.1.1.0 0.0.0.255 host 10.100.100.100 eq http
+D. access��list 100 permit tcp 10.1.1.0 0.0.0.255 host 10.100.100.100 eq http
 !
 route-map POLICY permit 10
  match ip address 100
@@ -3972,7 +3972,7 @@ route-map POLICY permit 10
 QUESTION 411,"QUESTION 411
 
 Refer to the exhibit. The company implemented uRPF to address an antispoofing attack. A network engineer received a call from the IT security department that the
-regional data center is under an IP spoofing attack. Which conﬁguration must be implemented on R1 to resolve this issue?","A. interface ethernet0/1
+regional data center is under an IP spoofing attack. Which con?guration must be implemented on R1 to resolve this issue?","A. interface ethernet0/1
  ip unicast RPF check reachable-via any allow-default allow-seIf-ping
 B. interface ethernet0/0
 ip verify unlcast reverse-path
@@ -3982,26 +3982,26 @@ D. interface ethernet0/0
  ip unicast RPF check reachable-via any allow-default allow-seIf-ping",C,p207_img0.png,206,411
 QUESTION 412,"QUESTION 412
 What is a characteristic of IPv6 RA Guard?","A. RA messages are allowed from the host port to the switch.
-B. It is unable to protect tunneled trafﬁc
-C. It ﬁlters rogue RA broadcasts from connected hosts
+B. It is unable to protect tunneled traf?c
+C. It ?lters rogue RA broadcasts from connected hosts
 D. It is supported on the egress direction of the switch.",C,,207,412
 QUESTION 413,"QUESTION 413
 
-Refer to the exhibit. An engineer applied an IPv6 trafﬁc ﬁlter on R1. The interface ﬂapped between R1 and R2 and clearing the BGP session did not restore the BGP
+Refer to the exhibit. An engineer applied an IPv6 traf?c ?lter on R1. The interface ?apped between R1 and R2 and clearing the BGP session did not restore the BGP
 session and failed. Which action must the engineer take to restore the BGP session from R2 to R1?","A. Enable the BGP session, which went down when the session was cleared.
-B. Swap the source and destination IP addresses in the IPv6 trafﬁc ﬁlter.
-C. Apply the IPv6 trafﬁc ﬁlter in the outbound direction on the interface.
-D. ICMPv6 must be permitted by the IPv6 trafﬁc ﬁlter.",D,"p208_img0.png,p208_img1.png",207,413
+B. Swap the source and destination IP addresses in the IPv6 traf?c ?lter.
+C. Apply the IPv6 traf?c ?lter in the outbound direction on the interface.
+D. ICMPv6 must be permitted by the IPv6 traf?c ?lter.",D,"p208_img0.png,p208_img1.png",207,413
 QUESTION 414,"QUESTION 414
 
 Refer to the exhibit. After reloading the router, an administrator discovered that the interface utilization graphs displayed inconsistencies with their previous history in
-thé NMS. Which action prevents this issue from occurring after another router reload in the future?","A. Rediscover all the router interfaces through SNMP after the router is reloaded.
-B. Save the router conﬁguration to startup-conﬁg before reloading the router.
-C. Conﬁgure SNMP to use static OIDs referring to individual router interfaces.
-D. Conﬁgure SNMP interface index persistence on the router.",D,p208_img2.png,208,414
+th�� NMS. Which action prevents this issue from occurring after another router reload in the future?","A. Rediscover all the router interfaces through SNMP after the router is reloaded.
+B. Save the router con?guration to startup-con?g before reloading the router.
+C. Con?gure SNMP to use static OIDs referring to individual router interfaces.
+D. Con?gure SNMP interface index persistence on the router.",D,p208_img2.png,208,414
 QUESTION 415,"QUESTION 415
 
-Refer to the exhibit. An engineer applies a preﬁx-list ﬁlter that ﬁlters most of the network 10 preﬁxes instead of allowing them. Which action resolves the Issue?","A. Modify the ip prefix-list EIGRP seq 10 permit 10.0.0.0/8 le 9 command.
+Refer to the exhibit. An engineer applies a pre?x-list ?lter that ?lters most of the network 10 pre?xes instead of allowing them. Which action resolves the Issue?","A. Modify the ip prefix-list EIGRP seq 10 permit 10.0.0.0/8 le 9 command.
 B. Modify the ip prefix-list EIGRP seq 20 permit 10.0.0.0/8 ge 9 command.
 C. Modify the ip prefix-list EIGRP seq 10 permit 10.0.0.0/8 le 32 command.
 D. Modify the ip prefix-list EIGRP seq 20 permit 10.0.0.0/8 le 32 command.",C,p209_img0.png,208,415
@@ -4014,17 +4014,17 @@ D. Increase path bandwidth higher than 10.1.1.2 and higher than 10.1.2.2 between
 QUESTION 417,"QUESTION 417
 
 Refer to the exhibit-
-RR Conﬁguration:
+RR Con?guration:
 router bgp 100
  neighbor IBGP peer-group
  neighbor IBGP route-reflector-client
  neighbor 10.1.1.1 remote-as 100
  neighbor 10.1.2.2 remote-as 100
  neighbor 10.1.3.3 remote-as 100
-The network administrator conﬁgured the network to establish connectivity between all devices and notices that the ASBRs do not have routes for each other. Which
-set of conﬁgurations resolves this issue?","A. router bgp 100
+The network administrator con?gured the network to establish connectivity between all devices and notices that the ASBRs do not have routes for each other. Which
+set of con?gurations resolves this issue?","A. router bgp 100
  neighbor 10.1.1.1 next-hop-self
- neighbor 10.1.2.2 next-hop—self
+ neighbor 10.1.2.2 next-hop��self
  neighbor 10.1.3.3 ncxt-hop-self
 B. router bgp 100
  neighbor IBGP next-hop-self
@@ -4035,8 +4035,8 @@ D. router bgp 100
  neighbor 10.1.2.2 peer-group IBGP
  neighbor 10.1.3.3 peer-group IBGP",D,p209_img2.png,209,417
 QUESTION 418,"QUESTION 418
-The network administrator conﬁgured CoPP so that all HTTP and HTTPS trafﬁc from the administrator device located at 172.16.1.99 toward the router CPU is limited
-to 500 kbps. Any trafﬁc that exceeds this limit must be dropped.
+The network administrator con?gured CoPP so that all HTTP and HTTPS traf?c from the administrator device located at 172.16.1.99 toward the router CPU is limited
+to 500 kbps. Any traf?c that exceeds this limit must be dropped.
 
 access-list 100 permit ip host 172.16.1.99 any
 class-map CM-ADMIN
@@ -4046,7 +4046,7 @@ policy-map PM-COPP
  police 500000 conform-action transmit
 interfacc E0/0
  service-policy input PM-COPP
-CoPP failed to capture the desired trafﬁc and the CPU load is getting higher. Which two conﬁgurations resolve the issue? (Choose two.)","A. no access-list 100
+CoPP failed to capture the desired traf?c and the CPU load is getting higher. Which two con?gurations resolve the issue? (Choose two.)","A. no access-list 100
 access-list 100 pennit tcp host 172.16.1.99 any eq 80
 access-list 100 permit tcp host 172.16.1.99 any eq 443
 B. no access-list 100
@@ -4057,19 +4057,19 @@ C. policy-map PM-COPP
   police 500 conform-action transmit
 !
 control-plane
- service-policy input PM—COPP
+ service-policy input PM��COPP
 D. interface E0/0
- no service-policy input PM—COPP
+ no service-policy input PM��COPP
 !
 control-plane
- service-policy input PM—COPP
+ service-policy input PM��COPP
 E. policy-map PM-COPP
  class CM-ADMIN
   no police 500000 conform-action transmit
   police 500 conform-action transmit",AD,,210,418
 QUESTION 419,"QUESTION 419
 
-Refer to the exhibit. An engineer implemented CoPP but did not see OSPF trafﬁc going through it. Which conﬁguration resolves the issue?","A. ip access-list extended OSPF
+Refer to the exhibit. An engineer implemented CoPP but did not see OSPF traf?c going through it. Which con?guration resolves the issue?","A. ip access-list extended OSPF
  permit ospf any any
 B. policy-map COPP
  class OSPF
@@ -4080,34 +4080,34 @@ D. control-plane
  service-policy input COPP",A,p211_img0.png,210,419
 QUESTION 420,"QUESTION 420
 
-Refer to the exhibit A network engineer is provisioning end-to-end trafﬁc service for two different enterprise networks with these requirements:
-- The OSPF process must differ between customers on HQ and Branch ofﬁce routers, and adjacencies should come up instantly.
-- The enterprise networks are connected with overlapping networks between HQ and a Branch ofﬁce.
-Which conﬁguration meets the requirements for a customer site?
-","A. lSP(conﬁg)#int f3/0
-lSP(conﬁg-if)#ip vrf forwarding EA
-lSP(conﬁg-if)#description TO->EA2_Branch
-lSP(conﬁg-if)#ip address 172.16.200.2 255.255.255.0
-lSP(conﬁg-if)#no shut
-B. lSP(conﬁg)#int f2/0
-lSP(conﬁg-if)#ip vrf forwarding EA
-lSP(conﬁg-if)#description TO->EA1_HQ
-lSP(conﬁg-if)#ip address 172.16.100.2 255.255.255.0
-lSP(conﬁg-if)#no shut
-C. lSP(conﬁg)#int f0/0
-lSP(conﬁg-if)#ip vrf forwarding EB
-lSP(conﬁg-if)#description TO->EB1_HQ
-lSP(conﬁg-if)#ip address 172.16.100.2 255.255.255.0
-lSP(conﬁg-if)#no shut
-D. lSP(conﬁg)#int f1/0
-lSP(conﬁg-if)#ip vrf forwarding EA
-lSP(conﬁg-if)#description TO->EA2_Branch
-lSP(conﬁg-if)#ip address 172.16.200.2 255.255.255.0
-lSP(conﬁg-if)#no shut",D,p211_img1.png,211,420
+Refer to the exhibit A network engineer is provisioning end-to-end traf?c service for two different enterprise networks with these requirements:
+- The OSPF process must differ between customers on HQ and Branch of?ce routers, and adjacencies should come up instantly.
+- The enterprise networks are connected with overlapping networks between HQ and a Branch of?ce.
+Which con?guration meets the requirements for a customer site?
+","A. lSP(con?g)#int f3/0
+lSP(con?g-if)#ip vrf forwarding EA
+lSP(con?g-if)#description TO->EA2_Branch
+lSP(con?g-if)#ip address 172.16.200.2 255.255.255.0
+lSP(con?g-if)#no shut
+B. lSP(con?g)#int f2/0
+lSP(con?g-if)#ip vrf forwarding EA
+lSP(con?g-if)#description TO->EA1_HQ
+lSP(con?g-if)#ip address 172.16.100.2 255.255.255.0
+lSP(con?g-if)#no shut
+C. lSP(con?g)#int f0/0
+lSP(con?g-if)#ip vrf forwarding EB
+lSP(con?g-if)#description TO->EB1_HQ
+lSP(con?g-if)#ip address 172.16.100.2 255.255.255.0
+lSP(con?g-if)#no shut
+D. lSP(con?g)#int f1/0
+lSP(con?g-if)#ip vrf forwarding EA
+lSP(con?g-if)#description TO->EA2_Branch
+lSP(con?g-if)#ip address 172.16.200.2 255.255.255.0
+lSP(con?g-if)#no shut",D,p211_img1.png,211,420
 QUESTION 421,"QUESTION 421
 
 Refer to the exhibit. An engineer is troubleshooting failed access by contractors to the business application server via Telnet or HTTP during the
-weekend. Which conﬁguration resolves the issue?","A. R1
+weekend. Which con?guration resolves the issue?","A. R1
 no access-list 101 permit tcp 10.3.3.0 0.0.0.255 host 10.1.1.3 eq telnet time-range Contractor
 B. R4
 no access-list 101 permit tcp 10.3.3.0 0.0.0.255 host 10.1.1.3 eq telnet time-range Contractor
@@ -4121,8 +4121,8 @@ time-range Contractor
  periodic daily 8:00 to 16:30",C,p212_img0.png,212,421
 QUESTION 422,"QUESTION 422
 
-Refer to the exhibit. Two routers are connected back to back via Gigabit Ethernet 0/0 interfaces. Which conﬁguration provides VRF-Lite connectivity for two separate
-VRFs using the preﬁxes 10.1.1.0/24 for one VRF and 10.2.2.0/24 for the other VRF?","A. ip vrf 1
+Refer to the exhibit. Two routers are connected back to back via Gigabit Ethernet 0/0 interfaces. Which con?guration provides VRF-Lite connectivity for two separate
+VRFs using the pre?xes 10.1.1.0/24 for one VRF and 10.2.2.0/24 for the other VRF?","A. ip vrf 1
  rd 65001:1
 ip vrf 2
  rd 65001:2
@@ -4200,21 +4200,21 @@ interface FastEtherent0/1
 ipv6 router eigrp 1
  stub summary
  no shutdown
-Refer to the exhibit. R1 connecting to R2's f0/1 cannot receive the R2 preﬁx. What must be reconﬁgured to advertise R2 interfaces to R1?","A. EIGRP process on R2 by removing the stub command keyword summary
+Refer to the exhibit. R1 connecting to R2's f0/1 cannot receive the R2 pre?x. What must be recon?gured to advertise R2 interfaces to R1?","A. EIGRP process on R2 by removing the stub command keyword summary
 B. EIGRP process on R2 with the command stub summary connected
-C. interface FastEthemet0/1 on R2 with an EIGRP summary for the loopback preﬁx
+C. interface FastEthemet0/1 on R2 with an EIGRP summary for the loopback pre?x
 D. EIGRP process on R2 with the command stub summary receive-only",B,,213,423
 QUESTION 424,"QUESTION 424
 
-Refer to the exhibit. An engineer must ﬁlter EIGRP updates that are received to block all 10.10.10.0/24 preﬁxes. The engineer tests the distribute list and ﬁnds one
-associated preﬁx. Which action resolves the issue?","A. There is a permit in the route map that allows this preﬁx. A deny 20 statement is required with no match condition to block the preﬁx.
-B. There is a permit in the route map that allows this preﬁx. A deny 20 statement is required with a match condition to match a new ACL that
-denies all preﬁxes.
-C. There is a permit in the ACL that allows this preﬁx into EIGRP. The ACL should be modiﬁed to deny 10.10.10.0 0.0.0.255.
-D. There is a permit in the ACL that allows this preﬁx into EIGRP. The ACL should be modiﬁed to deny 10.10.10.0 255.255.255.0.",C,p214_img0.png,214,424
+Refer to the exhibit. An engineer must ?lter EIGRP updates that are received to block all 10.10.10.0/24 pre?xes. The engineer tests the distribute list and ?nds one
+associated pre?x. Which action resolves the issue?","A. There is a permit in the route map that allows this pre?x. A deny 20 statement is required with no match condition to block the pre?x.
+B. There is a permit in the route map that allows this pre?x. A deny 20 statement is required with a match condition to match a new ACL that
+denies all pre?xes.
+C. There is a permit in the ACL that allows this pre?x into EIGRP. The ACL should be modi?ed to deny 10.10.10.0 0.0.0.255.
+D. There is a permit in the ACL that allows this pre?x into EIGRP. The ACL should be modi?ed to deny 10.10.10.0 255.255.255.0.",C,p214_img0.png,214,424
 QUESTION 425,"QUESTION 425
-A network administrator must optimize the segment size of the TCP packet on the DMVPN lPsec protected tunnel interface, which carries application trafﬁc from the
-head ofﬁce to a designated branch. The TCP segment size must not overwhelm the MTU of the outbound link. Which configuration must be applied to the router to improve the application performance?","A. interface tunnel30
+A network administrator must optimize the segment size of the TCP packet on the DMVPN lPsec protected tunnel interface, which carries application traf?c from the
+head of?ce to a designated branch. The TCP segment size must not overwhelm the MTU of the outbound link. Which configuration must be applied to the router to improve the application performance?","A. interface tunnel30
 ip mtu 1400
 ip tcp max-segment 1360
 !
@@ -4578,7 +4578,16 @@ interface Tunnel0
  ip nhrp network-id 5
  tunnel source Seria10/0
  tunnel mode gre multipoint
-Which configuration accomplishes the task?
+Which configuration accomplishes the task?","A. Reno:
+interface Tunnel0
+ ip address 10.0.80.3 255.255.255.0
+ ip nhrp authentication cisco123
+ ip nhrp map multicast 10.92.18.2
+ ip nhrp map 10.0.80.1 10.92.18.2
+ ip nhrp network-id 5
+ ip nhrp nhs 10.0.80.1
+ tunnel source 10.238.194.2
+ tunnel mode gre multipoint
 Detroit:
 interface Tunnel0
  ip address 10.0.80.4 255.255.255.0
@@ -4648,15 +4657,6 @@ interface Tunnel0
  ip nhrp network-id 5
  ip nhrp nhs 10.0.80.1
  tunnel source 10.7.44.2
- tunnel mode gre multipoint","A. Reno:
-interface Tunnel0
- ip address 10.0.80.3 255.255.255.0
- ip nhrp authentication cisco123
- ip nhrp map multicast 10.92.18.2
- ip nhrp map 10.0.80.1 10.92.18.2
- ip nhrp network-id 5
- ip nhrp nhs 10.0.80.1
- tunnel source 10.238.194.2
  tunnel mode gre multipoint",A,p229_img0.png,229,450
 QUESTION 451,"QUESTION 451
 What is considered the primary advantage of running BFD?","A. reduction in time needed to detect Layer 2 switched neighbor failures
@@ -4912,15 +4912,15 @@ below:
 
 hostname CPE
 ip access-list extended WAN
-<…>
+<��>
 Remark => All UDP rules below for WAN ID: D246P42F81E36 
 permit udp any eq domain any
 permit udp any any eq tftp
 deny udp any any
 interface GigabitEthernet0/0
-<…>
+<��>
 ip access-group WAN in
-<…>
+<��>
 tftp-server flash:pp-adv-csr1000v-1608.2a-46-27.0.0.pack
 The transfer fails. Which action resolves this issue?","A. Change the WAN ACL to permit the entire UDP destination port range.
 B. Shorten the file name to the 8+3 naming convention.
@@ -5683,7 +5683,7 @@ C.
 D.",C,"p278_img1.png,p278_img2.png,p279_img0.png,p279_img1.png,p279_img2.png",278,529
 QUESTION 530,"QUESTION 530
 An engineer configured a router with this configuration:
-The router console starts receiving log message “%SEC-6-IPACCESSLOGP: list DENY_TELNET denied tcp192.168.1.10(10222) (FastEthernet1/0 E416.98ac.116e) ->192.168.2.20(23), 1 packet”. Which action stops messages on the console while still denying Telnet?","A. Remove log-input keyword from the access list.
+The router console starts receiving log message ��%SEC-6-IPACCESSLOGP: list DENY_TELNET denied tcp192.168.1.10(10222) (FastEthernet1/0 E416.98ac.116e) ->192.168.2.20(23), 1 packet��. Which action stops messages on the console while still denying Telnet?","A. Remove log-input keyword from the access list.
 B. Configure a 20 permit ip any any log-input command.
 C. Configure a 20 permit ip any any command.
 D. Replace log-input keyword with the log keyword in the access list.",A,p279_img3.png,279,530
@@ -6085,7 +6085,7 @@ D. area 1 stub no-summary",D,p305_img0.png,305,574
 QUESTION 575,"QUESTION 575
 
 An OSPF neighbor relationship between R2 and R3 is showing stuck in EXCHANGE/EXSTART state. The neighbor is established between R1 and R2. The network
-engineer can ping from R2 to R3 and vice versa, but the neighbor is still down. Which action resolves the issue?","A. Administrative “shut then no shut” both router interfaces.
+engineer can ping from R2 to R3 and vice versa, but the neighbor is still down. Which action resolves the issue?","A. Administrative ��shut then no shut�� both router interfaces.
 B. Enable OSPF on the interface, which is required.
 C. Restore the Layer 2/Layer 3 connectivity issue in the ISP network.
 D. Match MTU on both router interfaces or ignore MTU.",D,p305_img1.png,305,575
@@ -6135,7 +6135,7 @@ R1(config)#router ospf 10
 R1(config-router)#redistribute eigrp 100 subnets route-map CCNP",A,"p308_img0.png,p308_img1.png",308,580
 QUESTION 581,"QUESTION 581
 
-An engineer must troubleshoot an issue with the aaa authentication that affected the user’s login to router R1. Which command allows the configured user to
+An engineer must troubleshoot an issue with the aaa authentication that affected the user��s login to router R1. Which command allows the configured user to
 authenticate?","A. aaa authentication login default group tacacs+
 B. aaa authentication login default group radius
 C. aaa authentication login default group radius tacacs+
@@ -6403,7 +6403,7 @@ C. LDP notification messages allow LERs to exchange label information to determi
 D. Peer routers establish the LDP session, and the LDP neighbors maintain and terminate the session by exchanging messages.",D,,319,605
 QUESTION 606,"QUESTION 606
 
-R1 should have BGP routes as “i”. Which configuration resolves the issue?","A. R7
+R1 should have BGP routes as ��i��. Which configuration resolves the issue?","A. R7
 route-map RC permit 10
  match ip address 1
  set origin igp
@@ -6520,7 +6520,7 @@ QUESTION 613,"QUESTION 613
 
 The IP SLA probes 1, 2 and 3 verify the reachability of three distinct DNS servers hosted by ISP1. If all DNS servers are unreachable, the router should failover to
 ISP2 for Internet connectivity. However, the configuration is causing the router to failover to ISP2 even if some of the DNS servers are still reachable. Which action
-resolves the issue?","A. Rewrite the track object 14 to use the “or” operator
+resolves the issue?","A. Rewrite the track object 14 to use the ��or�� operator
 B. Reference the track object 14 to the IP SLA probes 1, 2, and 3 directly
 C. Use the administrative distance of 255 for the default route through ISP2
 D. Use the delay command in the track object 14",A,p326_img0.png,325,613
