@@ -3948,7 +3948,7 @@ C. Configure to use the Telnet user database for SSH as well.
 D. Configure SSH service on the router.",B,"p205_img1.png,p206_img0.png",205,409
 QUESTION 410,"QUESTION 410
 AAn engineer must override the normal routing behavior of a router. The engineer must send HTTP traffic that is destined to 10.100.100.100 from 10.1.1.0/24 via a next
-hop of 10.2.2.2, two hops away from the router that is connected to the 10.1.1.0/24 subnet. Which configuration reroutes traffic according to this requirement?,"A. access—list 100 permit tcp 10.1.1.0 0.0.0.255 host 10.100.100.100 eq http
+hop of 10.2.2.2, two hops away from the router that is connected to the 10.1.1.0/24 subnet. Which configuration reroutes traffic according to this requirement?","A. access—list 100 permit tcp 10.1.1.0 0.0.0.255 host 10.100.100.100 eq http
 !
 route-map POLICY permit 10
  match ip address 100
@@ -6519,7 +6519,7 @@ QUESTION 613,"QUESTION 613
 
 The IP SLA probes 1, 2 and 3 verify the reachability of three distinct DNS servers hosted by ISP1. If all DNS servers are unreachable, the router should failover to
 ISP2 for Internet connectivity. However, the configuration is causing the router to failover to ISP2 even if some of the DNS servers are still reachable. Which action
-resolves the issue?","A. Rewrite the track object 14 to use the "or" operator
+resolves the issue?","A. Rewrite the track object 14 to use the ""or"" operator
 B. Reference the track object 14 to the IP SLA probes 1, 2, and 3 directly
 C. Use the administrative distance of 255 for the default route through ISP2
 D. Use the delay command in the track object 14",A,p326_img0.png,325,613
