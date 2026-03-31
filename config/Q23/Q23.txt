@@ -19,12 +19,12 @@ hostname R1
 service timestamps debug datetime msec
 service timestamps log uptime
 
-interface Ethernet0/0
+interface g0/0
  ip address 10.12.0.1 255.255.255.252
  ipv6 address 2001:BB9:AABB:1234:1111:2222:3333:4444/64
  ipv6 enable
  ipv6 ospf 1 area 0
-interface Ethernet0/1
+interface g0/1
  ip address 10.11.0.1 255.255.255.252
  ipv6 address 2001:BB9:AABB:1212:1111:2222:3333:1111/64
  ipv6 address autoconfig
@@ -49,12 +49,12 @@ hostname R2
 service timestamps debug datetime msec
 no service timestamps log uptime
 
-interface Ethernet0/0
+interface g0/0
  ip address 10.12.0.2 255.255.255.252
  ipv6 address 2001:BB9:AABB:1234:1111:2222:3333:5555/64
  ipv6 enable
  ipv6 ospf 1 area 0
-interface Ethernet0/1
+interface g0/1
  ip address 10.22.0.2 255.255.255.252
  ipv6 address 2001:BB2:AABB:2202:1111:2222:3333:2021/64
  ipv6 address autoconfig
@@ -81,13 +81,13 @@ hostname SW2
 service timestamps debug datetime msec
 service timestamps log datetime msec
 
-interface Ethernet0/0
+interface g0/0
  no switchport
  ip address 10.201.0.1 255.255.255.252
  ipv6 address 2001:ABCD:ABCD:5678::/64 eui-64
  ipv6 enable
  ipv6 ospf 1 area 0
-interface Ethernet0/1
+interface g0/1
  no switchport
  ip address 10.22.0.1 255.255.255.252
  ipv6 address 2001:BB2:AABB:2202:1111:2222:3333:2022/64
