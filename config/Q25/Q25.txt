@@ -18,7 +18,7 @@ hostname R1
 
 interface Loopback0
  ip address 10.10.10.1 255.255.255.255
-interface Ethernet0/0
+interface g0/0
  ip address 10.0.0.1 255.255.255.252
 
 router eigrp 600
@@ -42,16 +42,16 @@ ip vrf Sales
 interface Loopback0
  ip address 10.10.10.2 255.255.255.255
 
-interface Ethernet0/0
+interface g0/0
  ip vrf forwarding Sales
  ip address 10.0.0.2 255.255.255.252
-interface Ethernet0/1
+interface g0/1
  ip vrf forwarding Sales
  ip address 10.0.0.5 255.255.255.252
-interface Ethernet0/2
+interface g0/2
  ip vrf forwarding Admin
  ip address 10.0.0.25 255.255.255.252
-interface Ethernet0/3
+interface g0/3
  ip vrf forwarding Admin
  ip address 192.168.20.2 255.255.255.252
 
@@ -77,18 +77,18 @@ ip vrf Sales
 interface Loopback0
  ip address 10.10.10.3 255.255.255.255
 
-interface Ethernet0/0
+interface g0/0
  ip vrf forwarding Sales
  ip address 10.0.0.9 255.255.255.252
  ip access-group BLOCK1 in
  ip access-group BLOCK1 out
-interface Ethernet0/1
+interface g0/1
  ip vrf forwarding Sales
  ip address 10.0.0.6 255.255.255.252
-interface Ethernet0/2
+interface g0/2
  ip vrf forwarding Admin
  ip address 10.0.0.30 255.255.255.252
-interface Ethernet0/3
+interface g0/3
  ip vrf forwarding Admin
  ip address 192.168.20.1 255.255.255.252
 

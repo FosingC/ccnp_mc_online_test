@@ -22,11 +22,11 @@ interface Loopback0
 interface Loopback16
  ip address 172.16.16.16 255.255.255.255
 
-interface Ethernet0/0
+interface g0/0
  ip address 10.0.10.1 255.255.255.252
  ip ospf 1 area 1
  no shutdown
-interface Ethernet0/1
+interface g0/1
  ip address 10.0.20.1 255.255.255.252
  ip ospf 1 area 0
  no shutdown
@@ -48,10 +48,10 @@ enable
 configure terminal
 hostname EAST
 
-interface Ethernet0/0
+interface g0/0
  ip address 192.168.10.1 255.255.255.0
  no shutdown
-interface Ethernet0/1
+interface g0/1
  ip address 10.0.10.2 255.255.255.252
  ip verify unicast source reachable-via rx
  no shutdown
@@ -85,7 +85,7 @@ username SW2 secret Cisco
 aaa new-model
 aaa authentication login telnet local
 
-interface Ethernet0/0
+interface g0/0
  ip address 192.168.20.2 255.255.255.0
  no shutdown
 
@@ -135,7 +135,7 @@ write memory
 EAST
 enable
 configure terminal
-interface Ethernet0/1
+interface g0/1
  ip verify unicast source reachable-via rx allow-default
 end
 write memory

@@ -22,10 +22,10 @@ aaa new-model
 aaa authentication login default local-case none
 aaa authentication login SSH_Connections local none
 
-interface Ethernet0/0
+interface g0/0
  ip address 192.168.20.1 255.255.255.0
  no shutdown
-interface Ethernet0/1
+interface g0/1
  ip address 20.0.20.2 255.255.255.252
  no shutdown
 
@@ -50,10 +50,10 @@ enable
 configure terminal
 hostname EAST
 
-interface Ethernet0/0
+interface g0/0
  ip address 192.168.10.1 255.255.255.0
  no shutdown
-interface Ethernet0/1
+interface g0/1
  ip address 10.0.10.2 255.255.255.252
  ip access-group icmp-rule in
  no shutdown
