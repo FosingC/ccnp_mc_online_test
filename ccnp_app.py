@@ -16,15 +16,25 @@ HISTORY_FILE = "flagged_questions.json"
 def load_data():
     if not os.path.exists(CSV_FILE):
         return None
-    try:
-        df = pd.read_csv(CSV_FILE)
-        # 将题号转换为数值（使用 fillna 避免错误）
-        df['id_num'] = df['id'].astype(str).str.extract(r'(\d+)').fillna(0).astype(int)
-        df = df.sort_values('id_num').reset_index(drop=True)
-        return df
-    except Exception as e:
-        st.error(f"数据读取出错：{e}")
-        return None
+    
+    # 尝试多种编码读取CSV文件
+    encodings = ['utf-8-sig', 'utf-8', 'cp1252', 'latin1', 'gbk']
+    
+    for encoding in encodings:
+        try:
+            df = pd.read_csv(CSV_FILE, encoding=encoding)
+            # 将题号转换为数值（使用 fillna 避免错误）
+            df['id_num'] = df['id'].astype(str).str.extract(r'(\d+)').fillna(0).astype(int)
+            df = df.sort_values('id_num').reset_index(drop=True)
+            return df
+        except UnicodeDecodeError:
+            continue
+        except Exception as e:
+            st.error(f"数据读取出错：{e}")
+            return None
+    
+    st.error("无法识别CSV文件编码，请尝试重新运行 extract_ccnp.py")
+    return None
 
 # --- 学习记录管理 ---
 def load_history():
