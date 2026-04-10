@@ -1292,34 +1292,34 @@ access-list 101 permit ip 192.168.4.0 0.0.0.255 192.168.5.0 0.0.0.255
 route-map PBR1 permit 10
 match ip address 101
 set ip next-hop 172.18.1.2
-��
+?
 interface Ethernet0/3
 ip policy route-map PBR1
 B. access-list 101 permit tcp 192.168.3.0 0.0.0.255 192.168.5.0 0.0.0.255 eq 23
 access-list 101 permit tcp 192.168.4.0 0.0.0.255 192.168.5.0 0.0.0.255 eq 23
-��
+?
 route-map PBR1 permit 10
 match ip address 101
 set ip next-hop 172.18.1.2
-��
+?
 interface Ethernet0/1
 ip policy route-map PBR1
 C. access-list 101 permit tcp 192.168.3.0 0.0.0.255 192.168.5.0 0.0.0.255 eq 23
 access-list 101 permit tcp 192.168.4.0 0.0.0.255 192.168.5.0 0.0.0.255 eq 23
-��
+?
 route-map PBR1 permit 10
 match ip address 101
 set ip next-hop 172.18.1.2
-��
+?
 interface Ethernet0/3
 ip policy route-map PBR1
 D. access-list 101 permit ip 192.168.3.0 0.0.0.255 192.168.5.0 0.0.0.255
 access-list 101 permit ip 192.168.4.0 0.0.0.255 192.168.5.0 0.0.0.255
-��
+?
 route-map PBR1 permit 10
 match ip address 101
 set ip next-hop 172.18.1.2
-��
+?
 interface Ethernet0/1
 ip policy route-map PBR1",C,p91_img1.png,91,197
 QUESTION 198,"QUESTION 198
@@ -3120,14 +3120,14 @@ D. secured bidirectional tunnel",C,,179,356
 QUESTION 357,"QUESTION 357
 
 Refer to the exhibit. Routers R1. R2, R3, and R4 use EIGRP. However, traf?c always prefers R1 to R5 backup links in nonfailure scenarios. Which con?guration
-resolves the issue?","A. R1(con?g)#int gigabitEthernet 0/0/0
-R1(con?g-if)#bandvvidth 10000000
-B. R1(con?g)#no ip route 10.40.10.0 255.255.255.252 10.10.20.2
-R1(con?g)#ip route 10.40.10.0 255.255.255.252 10.10.20.2 115
-C. R1(con?g)#no ip route 10.40.10.0 255.255.255.252 10.10.20.2
-R1(con?g)#ip route 0.0.0.0 0.0.0.0 10.10.10.2
-D. R1(con?g)#int gigabitEthernet 0/0/0
-R1(con?g-if)#bandvvidth 10000",B,p179_img0.png,179,357
+resolves the issue?","A. R1(config)#int gigabitEthernet 0/0/0
+R1(config-if)#bandvvidth 10000000
+B. R1(config)#no ip route 10.40.10.0 255.255.255.252 10.10.20.2
+R1(config)#ip route 10.40.10.0 255.255.255.252 10.10.20.2 115
+C. R1(config)#no ip route 10.40.10.0 255.255.255.252 10.10.20.2
+R1(config)#ip route 0.0.0.0 0.0.0.0 10.10.10.2
+D. R1(config)#int gigabitEthernet 0/0/0
+R1(config-if)#bandvvidth 10000",B,p179_img0.png,179,357
 QUESTION 358,"QUESTION 358
 
 Refer to the exhibit. An engineer cannot determine the time of the problem on R1 due to a mismatch between the router local clock and logs. Which oornmand synchromzes the time between new log entries and the local dock on R1?","A. service timestamps log dateflme msec show-timezone
@@ -3142,7 +3142,7 @@ C. IGP does not have a route to R4. Rectify route reachability.
 D. BGP has not been redistributed into the IGP. Redistribute BGP.",C,p180_img1.png,180,359
 QUESTION 360,"QUESTION 360
 
-Refer to the exhibit. Router R2 should be learning the route for 10.123.187.0/24 via EIGRP. Which action resolves the issue without introducing more issues?","A. Use distribute-list to ?lter the external routes in OSPF.
+Refer to the exhibit. Router R2 should be learning the route for 10.123.187.0/24 via EIGRP. Which action resolves the issue without introducing more issues?","A. Use distribute-list to filter the external routes in OSPF.
 B. Redistribute the route in EIGRP with metric, delay, and reliability.
 C. Remove route redistribution in R2 for this route in OSPF.
 D. Use distribute-list to modifv the route as an internal EIGRP route.",A,"p181_img0.png,p181_img1.png",180,360
@@ -6059,10 +6059,10 @@ D. area 1 stub no-summary",D,p305_img0.png,305,574
 QUESTION 575,"QUESTION 575
 
 An OSPF neighbor relationship between R2 and R3 is showing stuck in EXCHANGE/EXSTART state. The neighbor is established between R1 and R2. The network
-engineer can ping from R2 to R3 and vice versa, but the neighbor is still down. Which action resolves the issue?","A. Administrative “shut then no shut” both router interfaces.
+engineer can ping from R2 to R3 and vice versa, but the neighbor is still down. Which action resolves the issue?","A. Administrative """"shut then no shut"""" both router interfaces.
 B. Enable OSPF on the interface, which is required.
 C. Restore the Layer 2/Layer 3 connectivity issue in the ISP network.
-D. Match MTU on both router interfaces or ignore MTU. ",D,p305_img1.png,305,575
+D. Match MTU on both router interfaces or ignore MTU.",D,p305_img1.png,305,575
 QUESTION 576,"QUESTION 576
 Users report web connectivity problems on the server (10.1.1.10). Which IP SLA configuration captures the failure details through the network to resolve the issue?","A.
 B.
