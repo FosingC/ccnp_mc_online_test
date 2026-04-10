@@ -1248,19 +1248,7 @@ aggregate-address 172.16.20.0 255 255.252.0 suppress-map BLOCKSPECIFIC",A,p88_im
 QUESTION 193,"QUESTION 193
 Refer to the exhibit. Traffic from the branch network should route through HQ_R1 unless the path is unavailable. An engineer tests this functionality by shutting down
 interface on the BRANCH router toward HQ_R1 router but 192.168.20.0/24 is no longer reachable from the branch router. Which set of configurations resolves the
-issue?
-
-BRANCH(config)# ip route 0.0.0.0 0.0.0.0 172.16.35.2 track 1
-BRANCH(config)# ip route 0.0.0.0 0.0.0.0 172.16.35.6 5
-!
-BRANCH(config)# ip sla 1
-BRANCH(config-ip-sla)# icmp-echo 172.16.35.6
-BRANCH(config-ip-sla)# timeout 200
-BRANCH(config-ip-sla)# frequency 5
-!
-BRANCH(config)#ip sla schedule 1 life forever start-time now
-!
-BRANCH(config)# track 1 ip sla 1 reachability","A. HQ_R1(config)# ip sla responder
+issue?","A. HQ_R1(config)# ip sla responder
 HQ_R1(config)# ip sla responder icmp-echo 172.16.35.2
 B. BRANCH(config)# ip sla 1
 BRANCH(config-ip-sla)# icmp-echo 172.16.35.1
@@ -1668,21 +1656,21 @@ D. The Python interpreter must ?rst be enabled with the guestshell enable comman
 QUESTION 239,"QUESTION 239
 Refer to the exhibit.
 
-An engineer con?gured BGP between routers R1 and R3. The BGP peers cannot establish neighbor adjacency to be able to exchange routes. Which con?guration
-resolves this issue?
+An engineer configured BGP between routers R1 and R3. The BGP peers cannot establish neighbor adjacency to be able to exchange routes. Which configuration
+resolves this issue?","A. R3
 router bgp 6502
 address-family ipv6
 neighbor AB01:2011:7:100::1 activate
+B. R1
 router bgp 6501
 address-family ipv6
 neighbor AB01:2011:7:100::3 activate
+C. R3
 router bgp 6502
 neighbor AB01:2011:7:100::1 ebgp-multihop 255
+D. R1
 router bgp 6501
-neighbor AB01:2011:7:100::3 ebgp-multihop 255","A. R3
-B. R1
-C. R3
-D. R1",A,p115_img1.png,115,239
+neighbor AB01:2011:7:100::3 ebgp-multihop 255",A,p115_img1.png,115,239
 QUESTION 240,"QUESTION 240
 A network administrator is troubleshooting a high utilization issue on the route processor of a router that was reported by NMS. The administrator logged into the router
 to check the control plane policing and observed that the BGP process is dropping a high number of routing packets and causing thousands of routes to recalculate
@@ -2528,33 +2516,30 @@ C. used in service provider deployments to protect DDoS attacks
 D. requires that validate pre?x be enabled
 E. requires IPv6 snooping on Layer 2 access or trunk ports",CE,,156,306
 QUESTION 307,"QUESTION 307
-An engineer is creating a policy that overrides normal routing behavior. If the route to a destination of 10.100.100.0/24 is withdrawn from the routing table, the policy
-must direct traf?c to a next-hop of 10.1.1.1. If the route is present in the routing table, then normal forwarding must occur. Which con?guration meets the
-requirements?
-
+An engineer is creating a policy that overrides normal routing behavior. If the route to a destination of 10.100.100.0/24 is withdrawn from the routing table, the policy must direct traf?c to a next-hop of 10.1.1.1. If the route is present in the routing table, then normal forwarding must occur. Which con?guration meets the requirements?","A. access-list 100 permit ip any any
+!
+route-map POLICY permit 10
+match ip address 100
 set ip next-hop recursive 10.1.1.1
 B. access-list 100 permit ip any 10.100.100.0 0.0.0.255
 !
 route-map POLICY permit 10
-  match ip address 100
-  set ip next-hop recursive 10.1.1.1
+match ip address 100
+set ip next-hop recursive 10.1.1.1
 !
 route-map POLICY permit 20
 C. access-list 100 permit ip any 10.100.100.0 0.0.0.255
 !
 route-map POLICY permit 10
-  match ip address 100
-  set ip next-hop 10.1.1.1
+match ip address 100
+set ip next-hop 10.1.1.1
 !
 route-map POLICY permit 20
 D. access-list 100 permit ip any 10.100.100.0 0.0.0.255
 !
 route-map POLICY permit 10
-  match ip address 100
-  set ip default next-hop 10.1.1.1","A. access-list 100 permit ip any any
-!
-route-map POLICY permit 10
-  match ip address 100",D,,156,307
+match ip address 100
+set ip default next-hop 10.1.1.1",D,,156,307
 QUESTION 308,"QUESTION 308
 Refer to the exhibit.
 
@@ -3343,11 +3328,10 @@ interface GigabitEthernet2.10
  ip ospf 1 area 0
  no shutdown
 
-Refer to the exhibit. With the partial configuration of a router-on-a-stick, clients in VLAN 10 on Gi2 cannot obtain IP configuration from the central DHCP server. The
-DHCP server is reachable by a successful ping from the router. Which action resolves the issue?","A. Con?gure a valid IP address on the Gi2 interface so that DHCP requests can be forwarded.
-B. Con?gure the ip dhcp pool 1 and network 192.168.210.0 255.255.255.0 commands.
-C. Con?gure the ip helper-address 192.168.255.3 command on the Gi2.10 subinterface.
-D. Con?gure the ip dhcp excluded-address 192.168.255.3 command on the Gi2.10 subinterface.",C,,185,374
+Refer to the exhibit. With the partial configuration of a router-on-a-stick, clients in VLAN 10 on Gi2 cannot obtain IP configuration from the central DHCP server. The DHCP server is reachable by a successful ping from the router. Which action resolves the issue?","A. Configure a valid IP address on the Gi2 interface so that DHCP requests can be forwarded.
+B. Configure the ip dhcp pool 1 and network 192.168.210.0 255.255.255.0 commands.
+C. Configure the ip helper-address 192.168.255.3 command on the Gi2.10 subinterface
+D. Configure the ip dhcp excluded-address 192.168.255.3 command on the Gi2.10 subinterface.",C,,185,374
 QUESTION 375,"QUESTION 375
 An engineer con?gured routing between multiple OSPF domains and introduced a routing loop that caused network instability. Which action resolves the problem?","A. Set a tag using the redistribtute command toward a domain and deny inbound in the other domain by a matching tag
 B. Set a tag using the redistribtute command toward a different domain and deny the matching tag when exiting from that domain
