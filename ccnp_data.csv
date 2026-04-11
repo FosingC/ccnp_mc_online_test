@@ -132,7 +132,7 @@ B. debug ip sla error
 C. debug ip routing
 D. debug ip packet",B,p13_img1.png,13,21
 QUESTION 22,"QUESTION 22
-Which configuration enabled the VRF that is labeled ""“Inet""” on FastEthernet0/0? ","A. R1(config)# ip vrf Inet
+Which configuration enabled the VRF that is labeled ""ï¿½Inet""ï¿½ on FastEthernet0/0? ","A. R1(config)# ip vrf Inet
 R1(config-vrf)#ip vrf FastEthernet0/0
 B. R1(config)#ip vrf Inet FastEthernet0/0
 C. R1(config)# ip vrf Inet
@@ -780,9 +780,9 @@ D. It denies traffic by inspecting neighbor discovery packets for specific patte
 E. It blocks certain traffic by inspecting DHCP packets for specific sources.",AC,,52,123
 QUESTION 124,"QUESTION 124
 What is the output of the following command:
-show ip vrf","A. Show""’s default RD values
+show ip vrf","A. Show""ï¿½s default RD values
 B. Displays IP routing table information associated with a VRF
-C. Show""’s routing protocol information associated with a VRF.
+C. Show""ï¿½s routing protocol information associated with a VRF.
 D. Displays the ARP table (static and dynamic entries) in the specified VRF",A,,53,124
 QUESTION 125,"QUESTION 125
 An engineer configured access list NON-CISCO in a policy to influence routes. What are the two effects of this route map configuration? (Choose two.)","A. Packets are not evaluated by sequence 10.
@@ -1544,7 +1544,7 @@ vrf forwarding Science
 no shut",A,p107_img0.png,107,224
 QUESTION 225,"QUESTION 225
 
-A network administrator is tasked to permit http and https traffic only toward the internet from the User1 laptop to adhere to company’s security policy. The administrator can still ping to www.cisco.com Which interface should the access list 101 be applied to resolve this issue?","A. Interface G0/48 in the incoming direction
+A network administrator is tasked to permit http and https traffic only toward the internet from the User1 laptop to adhere to companyï¿½s security policy. The administrator can still ping to www.cisco.com Which interface should the access list 101 be applied to resolve this issue?","A. Interface G0/48 in the incoming direction
 B. Interface G0/0 in the outgoing direction.
 C. Interface S1/0 in the outgoing direction.
 D. Interface G0/0 in the incoming direction.",D,p108_img0.png,107,225
@@ -1999,13 +1999,7 @@ C. Use a leak map on R3 that matches the required prefix and apply it with the E
 D. Add a static null route for R2 loopback address in R1 and redistribute it to advertise to R3.",A,p132_img0.png,132,271
 QUESTION 272,"QUESTION 272
 Refer to the exhibit. The network administrator configured the network to connect two disjointed networks and ail the connectivity is up except the virtual link which
-causes area 250 to be unreachable. Which two configurations resolve this issue? (Choose two.)
-
-router-id 10.23.23.2
-E. R2
-router ospf 1
-no area 234 virtual-ink 10.34.34.4
-area 234 virtual-link 0.0.0.44","A. R4
+causes area 250 to be unreachable. Which two configurations resolve this issue? (Choose two.)","A. R4
 router ospf 1
 no area 234 virtual-link 10.23.23.2
 area 234 virtual-link 0.0.0.22
@@ -2018,7 +2012,12 @@ router ospf 1
 no area area 234 virtual-link 10.34.34.4
 area 0 virtual-link 0.0.0.44
 D. R2
-router ospf 1",AE,p134_img0.png,133,272
+router ospf 1
+router-id 10.23.23.2
+E. R2
+router ospf 1
+no area 234 virtual-ink 10.34.34.4
+area 234 virtual-link 0.0.0.44",AE,p134_img0.png,133,272
 QUESTION 273,"QUESTION 273
 Refer to the exhibit.
 
@@ -2931,9 +2930,9 @@ C. Increase the cost to 61 between R2 and R3
 D. Decrease the cost to 41 between R2 and R1.",C,p172_img1.png,172,340
 QUESTION 341,"QUESTION 341
 Refer to the exhibit. A network engineer applied a filter for LSA traffic on OSPFv3 interarea routes on the area 5 ABR to protect advertising the internal routes of area 5 to the business partner network. All other areas should receive the area 5 internal routes, After the respective route filtering configuration is applied on the ABR. area 5 routes are not visible on any of the areas. How must the filter list be applied on the ABR to resolve this issue?","A. in the """"out"""" direction for area 20 on router R2
-B. in the ""”out"""" direction for area 5 on router R1
-C. in the ""”in""” direction for area 20 on router R2
-D. in the ""”in"""" direction for area 5 on router R1",C,"p173_img0.png,p173_img1.png",172,341
+B. in the ""ï¿½out"""" direction for area 5 on router R1
+C. in the ""ï¿½in""ï¿½ direction for area 20 on router R2
+D. in the ""ï¿½in"""" direction for area 5 on router R1",C,"p173_img0.png,p173_img1.png",172,341
 QUESTION 342,"QUESTION 342
 ip sla 10
   icmp-echo 10.1.1.10
@@ -3039,12 +3038,11 @@ B. ip verify drop-rate notify hold-down 60
 C. no snmp trap link-status
 D. snmp trap link-status down",C,p176_img1.png,176,350
 QUESTION 351,"QUESTION 351
-
-Refer to the exhibit. The administrator is trying to overwrite an existing ?le on the TFTP server that was previously uploaded by another router. However, the attempt to
-update the ?le fails. Which action resolves this issue?","A. Make the package.conf ?le executable by all on the TFTP server.
+Refer to the exhibit. The administrator is trying to overwrite an existing file on the TFTP server that was previously uploaded by another router. However, the attempt to
+update the file fails. Which action resolves this issue?","A. Make the package.conf file executable by all on the TFTP server.
 B. Make sure to run the TFTP service on the TFTP server.
 C. Make the TFTP folder writable by all on the TFTP server.
-D. Make the package.conf ?le writable by all on the TFTP server.",D,p177_img0.png,176,351
+D. Make the package.conf file writable by all on the TFTP server.",D,p177_img0.png,176,351
 QUESTION 352,"QUESTION 352
 A newiy installed spoke router is con?gured for DMVPN with the ip mtu 1400 command. Which con?guration allows the spoke to use fragmentation with the maximum
 negotiated TCP MTU over GRE?","A. ip tcp payload-mtu 1360
@@ -3056,8 +3054,7 @@ crypto ipsec fragmentation mtu-discovery
 D. ip tcp adjust-mtu 1360
 crypto ipsec fragmentation after-encryption",D,,177,352
 QUESTION 353,"QUESTION 353
-
-Refer to the exhibit. Which con?guration allows Routerï¿½ï¿½l to reach 2005:DEAD:BEEF:DB2::/64?
+Refer to the exhibit. Which configuration allows Routerâ€˜l to reach 2005:DEAD:BEEF:DB2::/64?","A. Router1
 route-map Router1V6 permit 10
  set ipv6 next-hop 2006:DEAD:BEEF:DB1::1
  exit
@@ -3068,6 +3065,7 @@ router bgp 65001
  neighbor 10.12.12.2 activate
  neighbor 10.12.12.2 route-map Router1V6 out
 exit-address-family
+B. Router2
 route-map Router2V6 permit 10
  set ipv6 next-hop 2006:DEAD:BEEF:DB8::2
  exit
@@ -3078,6 +3076,7 @@ router bgp 65002
  neighbor 10.12.12.2 activate
  neighbor 10.12.12.2 route-map Router2V6 out
 exit-address-family
+C. Router2
 route-map Router2V6 permit 10
  set ipv6 next-hop 2006:DEAD:BEEF:DB8::2
  exit
@@ -3088,6 +3087,7 @@ router bgp 65002
  neighbor 10.12.12.2 activate
  neighbor 10.12.12.2 route-map Router out
 exit-address-family
+D. Router1
 route-map Router1V6 permit 10
  set ipv6 next-hop 2006:DEAD:BEEF:DB8::2
  exit
@@ -3097,10 +3097,7 @@ router bgp 65001
  network 2005:DEAD:BEEF:DB1::/64
  neighbor 10.12.12.2 activate
  neighbor 10.12.12.2 route-map Router1V6 out
-exit-address-family","A. Router1
-B. Router2
-C. Router2
-D. Router1",B,"p177_img1.png,p177_img2.png,p178_img0.png",177,353
+exit-address-family",B,"p177_img1.png,p177_img2.png,p178_img0.png",177,353
 QUESTION 354,"QUESTION 354
 What are the two goals of micro BFD sessions? (Choose two)","A. Each member link of a link aggregation group must run BFD
 B. Any member link on a link aggregation group must run BFD
