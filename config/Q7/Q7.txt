@@ -43,7 +43,6 @@ configure terminal
 hostname R0
 no ip domain-lookup
 
-! 物理公网接口
 interface FastEthernet0/0
  description WAN link to R1
  ip address 192.168.10.1 255.255.255.252
@@ -54,12 +53,10 @@ interface FastEthernet2/0
  ip address 192.168.20.1 255.255.255.252
  no shutdown
 
-! 站点 LAN（Loopback 模拟）
 interface Loopback0
  description Site-0 LAN GW
  ip address 10.100.0.1 255.255.255.0
 
-! DMVPN Hub Tunnel（未加 IPSec）
 interface Tunnel0
  ip address 10.0.0.254 255.255.255.0
  no ip redirects
@@ -69,7 +66,6 @@ interface Tunnel0
  tunnel source 192.168.10.1
  tunnel mode gre multipoint
 
-! OSPF
 router ospf 1
  router-id 0.0.0.0
  network 10.0.0.0 0.255.255.255 area 0
@@ -86,7 +82,6 @@ configure terminal
 hostname R1
 no ip domain-lookup
 
-! 物理公网接口
 interface FastEthernet0/0
  description WAN link to R0
  ip address 192.168.10.2 255.255.255.252
@@ -96,12 +91,10 @@ interface FastEthernet1/0
  description UNUSED link to R2 - keep down to avoid direct spoke connectivity
  shutdown
 
-! 站点 LAN（Loopback 模拟）
 interface Loopback0
  description Site-1 LAN GW
  ip address 10.100.1.1 255.255.255.0
 
-! DMVPN Spoke Tunnel（未加 IPSec）
 interface Tunnel0
  ip address 10.0.0.1 255.255.255.0
  ip nhrp map multicast 192.168.10.1
@@ -113,7 +106,6 @@ interface Tunnel0
  tunnel source 192.168.10.2
  tunnel destination 192.168.10.1
 
-! OSPF
 router ospf 1
  router-id 0.0.0.1
  network 10.0.0.0 0.255.255.255 area 0
@@ -130,7 +122,6 @@ configure terminal
 hostname R2
 no ip domain-lookup
 
-! 物理公网接口
 interface FastEthernet2/0
  description WAN link to R0
  ip address 192.168.20.2 255.255.255.252
@@ -140,12 +131,10 @@ interface FastEthernet1/0
  description UNUSED link to R1 - keep down to avoid direct spoke connectivity
  shutdown
 
-! 站点 LAN（Loopback 模拟）
 interface Loopback0
  description Site-2 LAN GW
  ip address 10.100.2.1 255.255.255.0
 
-! DMVPN Spoke Tunnel（未加 IPSec）
 interface Tunnel0
  ip address 10.0.0.2 255.255.255.0
  ip nhrp map multicast 192.168.10.1
@@ -157,10 +146,8 @@ interface Tunnel0
  tunnel source 192.168.20.2
  tunnel destination 192.168.10.1
 
-! 到 Hub 公网的静态路由（仅用于到 192.168.10.0/30）
 ip route 192.168.10.0 255.255.255.252 192.168.20.1
 
-! OSPF
 router ospf 1
  router-id 0.0.0.2
  network 10.0.0.0 0.255.255.255 area 0
