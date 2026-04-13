@@ -33,7 +33,6 @@ interface Tunnel0
  ip ospf network broadcast
  ip ospf priority 255
  tunnel source 192.168.1.2
- tunnel mode gre multipoint
 
 router ospf 1
  network 10.0.0.0 0.255.255.255 area 0

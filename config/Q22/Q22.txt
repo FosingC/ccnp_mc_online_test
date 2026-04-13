@@ -95,7 +95,7 @@ router eigrp 10
  default-metric 1 1 1 1 1
  network 10.0.46.0 0.0.0.15
  network 10.4.46.0 0.0.0.255
- redistribute ospf 10 route-map default
+ redistribute ospf 10
  redistribute rip
  distance 255 0.0.0.0 255.255.255.255 66
  eigrp router-id 10.4.44.4
